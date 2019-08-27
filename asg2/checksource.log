@@ -1,0 +1,3 @@
+checksource: line length > 72 characters
+   file "parser.ml": 1 errors: line 500
+checksource: TOTAL COMPLAINTS: 1

@@ -1,0 +1,3079 @@
+%PDF-1.4
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-272.304 -2.7 Td
+(README.text)Tj
+-86.5172 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+(1:)Tj
+12 TL
+T*[(2:)-600(Revised\(6\) Report on the Algorithmic Language Scheme.)]TJ
+T*[(3:)-600(http://www.r6rs.org/)]TJ
+(4:)'
+T*[(5:)-600(Revised\(5\) Report on the Algorithmic Language Scheme.)]TJ
+T*[(6:)-600(http://www.schemers.org/Documents/Standards/R5RS/)]TJ
+(7:)'
+T*[(8:)-600(Teach Yourself Scheme in Fixnum Days.)]TJ
+T*[(9:)-600(Dorai Sitaram)]TJ
+-6.6 -12 Td
+[(10:)-600(http://www.ccs.neu.edu/home/dorai/t-y-scheme/t-y-scheme.html)]TJ
+T*[(11:)-600(http://download.plt-scheme.org/doc/205/pdf/t-y-scheme.pdf)]TJ
+(12:)'
+T*[(13:)-600(MzScheme home page.)]TJ
+T*[(14:)-600(http://racket-lang.org/)]TJ
+(15:)'
+T*[(16:)-600(The Scheme Programming Language, 2nd ed.)]TJ
+T*[(17:)-600(R. Kent Dybvig.)]TJ
+T*[(18:)-600(http://www.scheme.com/tspl2d/)]TJ
+(19:)'
+T*[(20:)-600(How to Design Programs, 2nd ed.)]TJ
+T*[(21:)-600(Matthias Felleisen, Robert Findler, Matthew Flatt, Shriram Krishnamurthi)]TJ
+-20.8 -12 Td
+(.)Tj
+20.8 -12 Td
+[(22:)-600(http://www.htdp.org/)]TJ
+(23:)'
+T*[(24:)-600(Schemers.org)]TJ
+T*[(25:)-600(http://www.schemers.org/)]TJ
+(26:)'
+T*[(27:)-600(Structure and Interpretation of Computer Programs.)]TJ
+T*[(28:)-600(Hal Abelson, Jerry Sussman, Julie Sussman.)]TJ
+T*[(29:)-600(https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.ht)]TJ
+-20.8 -12 Td
+(ml)Tj
+20.8 -12 Td
+(30:)Tj
+T*[(31:)-600(Recursive Functions of Symbolic Expressions and their Computation)]TJ
+T*[(32:)-600(by Machine, Part I.)]TJ
+T*[(33:)-600(John McCarthy, CACM, April 1960.)]TJ
+T*[(34:)-600(http://www-formal.stanford.edu/jmc/recursive.html)]TJ
+(35:)'
+T*[(36:)-600($Id: README.text,v 1.12 2018-08-23 13:30:35-07 - - $)]TJ
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+2167
+endobj
+19 0 obj
+<</Length 20 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-251.696 -2.7 Td
+(sbi.scm)Tj
+-107.125 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(#!/afs/cats.ucsc.edu/courses/cmps112-wm/usr/racket/bin/mzscheme -qr)]TJ
+12 TL
+T*[(2:)-600(;; $Id: sbi.scm,v 1.5 2019-01-04 17:04:42-08 - - $)]TJ
+T*[(3:)-600(;;)]TJ
+T*[(4:)-600(;; NAME)]TJ
+T*[(5:)-600(;;    sbi.scm - silly basic interpreter)]TJ
+T*[(6:)-600(;;)]TJ
+T*[(7:)-600(;; SYNOPSIS)]TJ
+T*[(8:)-600(;;    sbi.scm filename.sbir)]TJ
+T*[(9:)-600(;;)]TJ
+-6.6 -12 Td
+[(10:)-600(;; DESCRIPTION)]TJ
+T*[(11:)-600(;;    The file mentioned in argv[1] is read and assumed to be an SBIR)]TJ
+T*[(12:)-600(;;    program, which is the executed.  Currently it is only printed.)]TJ
+T*[(13:)-600(;;)]TJ
+(14:)'
+T*[(15:)-600(\(define *stdin* \(current-input-port\)\))]TJ
+T*[(16:)-600(\(define *stdout* \(current-output-port\)\))]TJ
+T*[(17:)-600(\(define *stderr* \(current-error-port\)\))]TJ
+(18:)'
+T*[(19:)-600(\(define *run-file*)]TJ
+T*[(20:)-600(    \(let-values)]TJ
+T*[(21:)-600(        \(\(\(dirpath basepath root?\))]TJ
+T*[(22:)-600(            \(split-path \(find-system-path 'run-file\)\)\)\))]TJ
+T*[(23:)-600(        \(path->string basepath\)\))]TJ
+T*[(24:)-600<29>]TJ
+(25:)'
+T*[(26:)-600(\(define \(die list\))]TJ
+T*[(27:)-600(    \(for-each \(lambda \(item\) \(display item *stderr*\)\) list\))]TJ
+T*[(28:)-600(    \(newline *stderr*\))]TJ
+T*[(29:)-600(    \(exit 1\))]TJ
+T*[(30:)-600<29>]TJ
+(31:)'
+T*[(32:)-600(\(define \(usage-exit\))]TJ
+T*[(33:)-600(    \(die `\("Usage: " ,*run-file* " filename"\)\))]TJ
+T*[(34:)-600<29>]TJ
+(35:)'
+T*[(36:)-600(\(define \(readlist-from-inputfile filename\))]TJ
+T*[(37:)-600(    \(let \(\(inputfile \(open-input-file filename\)\)\))]TJ
+T*[(38:)-600(         \(if \(not \(input-port? inputfile\)\))]TJ
+T*[(39:)-600(             \(die `\(,*run-file* ": " ,filename ": open failed"\)\))]TJ
+T*[(40:)-600(             \(let \(\(program \(read inputfile\)\)\))]TJ
+T*[(41:)-600(                  \(close-input-port inputfile\))]TJ
+T*[(42:)-600(                         program\)\)\)\))]TJ
+(43:)'
+T*[(44:)-600(\(define \(dump-stdin\))]TJ
+T*[(45:)-600(    \(let \(\(token \(read\)\)\))]TJ
+T*[(46:)-600(         \(printf "token=~a~n" token\))]TJ
+T*[(47:)-600(         \(when \(not \(eq? token eof\)\) \(dump-stdin\)\)\)\))]TJ
+(48:)'
+(49:)'
+T*[(50:)-600(\(define \(write-program-by-line filename program\))]TJ
+T*[(51:)-600(    \(printf "==================================================~n"\))]TJ
+T*[(52:)-600(    \(printf "~a: ~s~n" *run-file* filename\))]TJ
+T*[(53:)-600(    \(printf "==================================================~n"\))]TJ
+T*[(54:)-600(    \(printf "\(~n"\))]TJ
+T*[(55:)-600(    \(map \(lambda \(line\) \(printf "~s~n" line\)\) program\))]TJ
+T*[(56:)-600(    \(printf "\)~n"\))]TJ
+T*[(57:)-600(    \(dump-stdin\)\))]TJ
+(58:)'
+ET
+Q
+Q
+endstream
+endobj
+20 0 obj
+3223
+endobj
+24 0 obj
+<</Length 25 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(2)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-251.696 -2.7 Td
+(sbi.scm)Tj
+-107.125 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 63.8 718 Tm
+[(59:)-600(\(define \(main arglist\))]TJ
+12 TL
+T*[(60:)-600(    \(if \(or \(null? arglist\) \(not \(null? \(cdr arglist\)\)\)\))]TJ
+T*[(61:)-600(        \(usage-exit\))]TJ
+T*[(62:)-600(        \(let* \(\(sbprogfile \(car arglist\)\))]TJ
+T*[(63:)-600(               \(program \(readlist-from-inputfile sbprogfile\)\)\))]TJ
+T*[(64:)-600(              \(write-program-by-line sbprogfile program\)\)\)\))]TJ
+(65:)'
+T*[(66:)-600(;;\(when \(terminal-port? *stdin*\))]TJ
+T*[(67:)-600(;;      \(main \(vector->list \(current-command-line-arguments\)\)\)\))]TJ
+(68:)'
+ET
+Q
+Q
+endstream
+endobj
+25 0 obj
+1102
+endobj
+29 0 obj
+<</Length 30 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-303.207 -2.7 Td
+(.score/00-hello-world.sbir)Tj
+-55.6137 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 00-hello-world.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 00-hello-world.sbir,v 1.1 2018-09-27 14:31:36-07 - - $)]TJ
+T*[(3:)-600(;;   2: #)]TJ
+T*[(4:)-600(;;   3: # Classic Hello World program.)]TJ
+T*[(5:)-600(;;   4: #)]TJ
+T*[(6:)-600(;;   5: print "Hello, World!")]TJ
+T*[(7:)-600<28>]TJ
+T*[(8:)-600(\(    1          \))]TJ
+T*[(9:)-600(\(    2          \))]TJ
+-6.6 -12 Td
+[(10:)-600(\(    3          \))]TJ
+T*[(11:)-600(\(    4          \))]TJ
+T*[(12:)-600(\(    5          \(print "Hello, World!"\)\))]TJ
+T*[(13:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+30 0 obj
+1104
+endobj
+34 0 obj
+<</Length 35 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-286.492 -2.7 Td
+(.score/01-1to10.sbir)Tj
+-72.3289 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 01-1to10.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 01-1to10.sbir,v 1.1 2018-09-27 14:31:36-07 - - $)]TJ
+T*[(3:)-600(;;   2: #)]TJ
+T*[(4:)-600(;;   3: # Print the numbers 1 to 10, one number per line.)]TJ
+T*[(5:)-600(;;   4: #)]TJ
+T*[(6:)-600(;;   5: print  1)]TJ
+T*[(7:)-600(;;   6: print  2)]TJ
+T*[(8:)-600(;;   7: print  3)]TJ
+T*[(9:)-600(;;   8: print  4)]TJ
+-6.6 -12 Td
+[(10:)-600(;;   9: print  5)]TJ
+T*[(11:)-600(;;  10: print  6)]TJ
+T*[(12:)-600(;;  11: print  7)]TJ
+T*[(13:)-600(;;  12: print  8)]TJ
+T*[(14:)-600(;;  13: print  9)]TJ
+T*[(15:)-600(;;  14: print 10)]TJ
+T*[(16:)-600<28>]TJ
+T*[(17:)-600(\(    1          \))]TJ
+T*[(18:)-600(\(    2          \))]TJ
+T*[(19:)-600(\(    3          \))]TJ
+T*[(20:)-600(\(    4          \))]TJ
+T*[(21:)-600(\(    5          \(print 1\)\))]TJ
+T*[(22:)-600(\(    6          \(print 2\)\))]TJ
+T*[(23:)-600(\(    7          \(print 3\)\))]TJ
+T*[(24:)-600(\(    8          \(print 4\)\))]TJ
+T*[(25:)-600(\(    9          \(print 5\)\))]TJ
+T*[(26:)-600(\(   10          \(print 6\)\))]TJ
+T*[(27:)-600(\(   11          \(print 7\)\))]TJ
+T*[(28:)-600(\(   12          \(print 8\)\))]TJ
+T*[(29:)-600(\(   13          \(print 9\)\))]TJ
+T*[(30:)-600(\(   14          \(print 10\)\))]TJ
+T*[(31:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+35 0 obj
+1817
+endobj
+39 0 obj
+<</Length 40 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-285.708 -2.7 Td
+(.score/02-exprs.sbir)Tj
+-73.1133 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 02-exprs.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 02-exprs.sbir,v 1.1 2018-09-27 14:31:36-07 - - $)]TJ
+T*[(3:)-600(;;   2: #)]TJ
+T*[(4:)-600(;;   3: # some expressions using print)]TJ
+T*[(5:)-600(;;   4: )]TJ
+T*[(6:)-600(;;   5:         print "1+1      = ", 1+1)]TJ
+T*[(7:)-600(;;   6:         print "2-2      = ", 2- 2)]TJ
+T*[(8:)-600(;;   7:         print "3*3      = ", 3*3)]TJ
+T*[(9:)-600(;;   8: )]TJ
+-6.6 -12 Td
+[(10:)-600(;;   9:         print)]TJ
+T*[(11:)-600(;;  10: )]TJ
+T*[(12:)-600(;;  11:         print "4/9      = ", 4/9)]TJ
+T*[(13:)-600(;;  12:         print "3*4+5*6  = ", 3*4+5*6)]TJ
+T*[(14:)-600(;;  13: )]TJ
+T*[(15:)-600<28>]TJ
+T*[(16:)-600(\(    1          \))]TJ
+T*[(17:)-600(\(    2          \))]TJ
+T*[(18:)-600(\(    3          \))]TJ
+T*[(19:)-600(\(    4          \))]TJ
+T*[(20:)-600(\(    5          \(print "1+1      = " \(+ 1 1\)\)\))]TJ
+T*[(21:)-600(\(    6          \(print "2-2      = " \(- 2 2\)\)\))]TJ
+T*[(22:)-600(\(    7          \(print "3*3      = " \(* 3 3\)\)\))]TJ
+T*[(23:)-600(\(    8          \))]TJ
+T*[(24:)-600(\(    9          \(print\)\))]TJ
+T*[(25:)-600(\(   10          \))]TJ
+T*[(26:)-600(\(   11          \(print "4/9      = " \(/ 4 9\)\)\))]TJ
+T*[(27:)-600(\(   12          \(print "3*4+5*6  = " \(+ \(* 3 4\) \(* 5 6\)\)\)\))]TJ
+T*[(28:)-600(\(   13          \))]TJ
+T*[(29:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+40 0 obj
+1911
+endobj
+44 0 obj
+<</Length 45 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-285.708 -2.7 Td
+(.score/10-exprs.sbir)Tj
+-73.1133 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 10-exprs.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 10-exprs.sbir,v 1.1 2018-09-27 14:31:36-07 - - $)]TJ
+T*[(3:)-600(;;   2: #)]TJ
+T*[(4:)-600(;;   3: # All of the following should print something without error mess)]TJ
+-27.4 -12 Td
+(ages.)Tj
+27.4 -12 Td
+[(5:)-600(;;   4: # This program checks to see if expressions can be interpreted.)]TJ
+T*[(6:)-600(;;   5: #)]TJ
+T*[(7:)-600(;;   6: )]TJ
+T*[(8:)-600(;;   7:         let pi = 4 * atan\(1\))]TJ
+T*[(9:)-600(;;   8:         let e = exp\(1\))]TJ
+-6.6 -12 Td
+[(10:)-600(;;   9: )]TJ
+T*[(11:)-600(;;  10:         print "1+1      = ", 1+1)]TJ
+T*[(12:)-600(;;  11:         print "2-2      = ", 2- 2)]TJ
+T*[(13:)-600(;;  12:         print "3*3      = ", 3*3)]TJ
+T*[(14:)-600(;;  13:         print "4/9      = ", 4/9)]TJ
+T*[(15:)-600(;;  14:         print "2^10     = ", 2^10)]TJ
+T*[(16:)-600(;;  15:         print "3*4+5*6  = ", 3*4+5*6)]TJ
+T*[(17:)-600(;;  16: #)]TJ
+T*[(18:)-600(;;  17:         print "log\(10\)  = ", log\(10\))]TJ
+T*[(19:)-600(;;  18:         print "sqrt\(2\)  = ", sqrt\(2\))]TJ
+T*[(20:)-600(;;  19:         print "pi       = ", pi)]TJ
+T*[(21:)-600(;;  20:         print "e        = ", e)]TJ
+T*[(22:)-600(;;  21: #)]TJ
+T*[(23:)-600(;;  22:         print "+1/+0    = ", +1/+0)]TJ
+T*[(24:)-600(;;  23:         print "-1/+0    = ", -1/+0)]TJ
+T*[(25:)-600(;;  24:         print "+1/-0    = ", +1/-0)]TJ
+T*[(26:)-600(;;  25:         print "-1/-0    = ", -1/-0)]TJ
+T*[(27:)-600(;;  26:         print "+0/+0    = ", +0/+0)]TJ
+T*[(28:)-600(;;  27:         print "-0/-0    = ", -0/-0)]TJ
+T*[(29:)-600(;;  28:         print "sqrt\(-1\) = ", sqrt\(-1\))]TJ
+T*[(30:)-600(;;  29:         print "log\(0\)   = ", log\(0\))]TJ
+T*[(31:)-600(;;  30: #)]TJ
+T*[(32:)-600(;;  31:         print "6.02e23  = ", 6.02*10^23)]TJ
+T*[(33:)-600(;;  32:         print "\(1+2\)/7  = ", \(1+2\)/7)]TJ
+T*[(34:)-600<28>]TJ
+T*[(35:)-600(\(    1          \))]TJ
+T*[(36:)-600(\(    2          \))]TJ
+T*[(37:)-600(\(    3          \))]TJ
+T*[(38:)-600(\(    4          \))]TJ
+T*[(39:)-600(\(    5          \))]TJ
+T*[(40:)-600(\(    6          \))]TJ
+T*[(41:)-600(\(    7          \(let pi \(* 4 \(atan 1\)\)\)\))]TJ
+T*[(42:)-600(\(    8          \(let e \(exp 1\)\)\))]TJ
+T*[(43:)-600(\(    9          \))]TJ
+T*[(44:)-600(\(   10          \(print "1+1      = " \(+ 1 1\)\)\))]TJ
+T*[(45:)-600(\(   11          \(print "2-2      = " \(- 2 2\)\)\))]TJ
+T*[(46:)-600(\(   12          \(print "3*3      = " \(* 3 3\)\)\))]TJ
+T*[(47:)-600(\(   13          \(print "4/9      = " \(/ 4 9\)\)\))]TJ
+T*[(48:)-600(\(   14          \(print "2^10     = " \(^ 2 10\)\)\))]TJ
+T*[(49:)-600(\(   15          \(print "3*4+5*6  = " \(+ \(* 3 4\) \(* 5 6\)\)\)\))]TJ
+T*[(50:)-600(\(   16          \))]TJ
+T*[(51:)-600(\(   17          \(print "log\(10\)  = " \(log 10\)\)\))]TJ
+T*[(52:)-600(\(   18          \(print "sqrt\(2\)  = " \(sqrt 2\)\)\))]TJ
+T*[(53:)-600(\(   19          \(print "pi       = " pi\)\))]TJ
+T*[(54:)-600(\(   20          \(print "e        = " e\)\))]TJ
+T*[(55:)-600(\(   21          \))]TJ
+T*[(56:)-600(\(   22          \(print "+1/+0    = " \(/ \(+ 1\) \(+ 0\)\)\)\))]TJ
+T*[(57:)-600(\(   23          \(print "-1/+0    = " \(/ \(- 1\) \(+ 0\)\)\)\))]TJ
+ET
+Q
+Q
+endstream
+endobj
+45 0 obj
+3753
+endobj
+49 0 obj
+<</Length 50 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(2)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-285.708 -2.7 Td
+(.score/10-exprs.sbir)Tj
+-73.1133 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 63.8 718 Tm
+[(58:)-600(\(   24          \(print "+1/-0    = " \(/ \(+ 1\) \(- 0\)\)\)\))]TJ
+12 TL
+T*[(59:)-600(\(   25          \(print "-1/-0    = " \(/ \(- 1\) \(- 0\)\)\)\))]TJ
+T*[(60:)-600(\(   26          \(print "+0/+0    = " \(/ \(+ 0\) \(+ 0\)\)\)\))]TJ
+T*[(61:)-600(\(   27          \(print "-0/-0    = " \(/ \(- 0\) \(- 0\)\)\)\))]TJ
+T*[(62:)-600(\(   28          \(print "sqrt\(-1\) = " \(sqrt \(- 1\)\)\)\))]TJ
+T*[(63:)-600(\(   29          \(print "log\(0\)   = " \(log 0\)\)\))]TJ
+T*[(64:)-600(\(   30          \))]TJ
+T*[(65:)-600(\(   31          \(print "6.02e23  = " \(* 6.02 \(^ 10 23\)\)\)\))]TJ
+T*[(66:)-600(\(   32          \(print "\(1+2\)/7  = " \(/ \(+ 1 2\) 7\)\)\))]TJ
+T*[(67:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+50 0 obj
+1259
+endobj
+54 0 obj
+<</Length 55 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-277.546 -2.7 Td
+(.score/11-let.sbir)Tj
+-81.275 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 11-let.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 11-let.sbir,v 1.1 2018-09-27 14:31:36-07 - - $)]TJ
+T*[(3:)-600(;;   2: #)]TJ
+T*[(4:)-600(;;   3: # test let)]TJ
+T*[(5:)-600(;;   4: #)]TJ
+T*[(6:)-600(;;   5:         let i = 1)]TJ
+T*[(7:)-600(;;   6:         let j = i + 3)]TJ
+T*[(8:)-600(;;   7:         let k = 8 * i + 9 / j)]TJ
+T*[(9:)-600(;;   8:         print "i=", i)]TJ
+-6.6 -12 Td
+[(10:)-600(;;   9:         print "j=", j)]TJ
+T*[(11:)-600(;;  10:         print "k=", k)]TJ
+T*[(12:)-600<28>]TJ
+T*[(13:)-600(\(    1          \))]TJ
+T*[(14:)-600(\(    2          \))]TJ
+T*[(15:)-600(\(    3          \))]TJ
+T*[(16:)-600(\(    4          \))]TJ
+T*[(17:)-600(\(    5          \(let i 1\)\))]TJ
+T*[(18:)-600(\(    6          \(let j \(+ i 3\)\)\))]TJ
+T*[(19:)-600(\(    7          \(let k \(+ \(* 8 i\) \(/ 9 j\)\)\)\))]TJ
+T*[(20:)-600(\(    8          \(print "i=" i\)\))]TJ
+T*[(21:)-600(\(    9          \(print "j=" j\)\))]TJ
+T*[(22:)-600(\(   10          \(print "k=" k\)\))]TJ
+T*[(23:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+55 0 obj
+1571
+endobj
+59 0 obj
+<</Length 60 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-290.769 -2.7 Td
+(.score/12-let-dim.sbir)Tj
+-68.0523 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 12-let-dim.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 12-let-dim.sbir,v 1.1 2019-01-04 17:04:42-08 - - $)]TJ
+T*[(3:)-600(;;   2: )]TJ
+T*[(4:)-600(;;   3: # Simple let without expressions.)]TJ
+T*[(5:)-600(;;   4: )]TJ
+T*[(6:)-600(;;   5:         let i = 6)]TJ
+T*[(7:)-600(;;   6:         print i)]TJ
+T*[(8:)-600(;;   7:         dim a[10])]TJ
+T*[(9:)-600(;;   8:         let a[i] = 9)]TJ
+-6.6 -12 Td
+[(10:)-600(;;   9:         print a[i])]TJ
+T*[(11:)-600<28>]TJ
+T*[(12:)-600(\(    1          \))]TJ
+T*[(13:)-600(\(    2          \))]TJ
+T*[(14:)-600(\(    3          \))]TJ
+T*[(15:)-600(\(    4          \))]TJ
+T*[(16:)-600(\(    5          \(let i 6\)\))]TJ
+T*[(17:)-600(\(    6          \(print i\)\))]TJ
+T*[(18:)-600(\(    7          \(dim \(asub a 10\)\)\))]TJ
+T*[(19:)-600(\(    8          \(let \(asub a i\) 9\)\))]TJ
+T*[(20:)-600(\(    9          \(print \(asub a i\)\)\))]TJ
+T*[(21:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+60 0 obj
+1473
+endobj
+64 0 obj
+<</Length 65 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-282.992 -2.7 Td
+(.score/20-goto.sbir)Tj
+-75.8289 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 20-goto.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 20-goto.sbir,v 1.1 2018-09-27 14:31:36-07 - - $)]TJ
+T*[(3:)-600(;;   2: #)]TJ
+T*[(4:)-600(;;   3:         goto zero)]TJ
+T*[(5:)-600(;;   4: four:   print "four")]TJ
+T*[(6:)-600(;;   5:         goto done)]TJ
+T*[(7:)-600(;;   6: one:    print "one")]TJ
+T*[(8:)-600(;;   7:         goto two)]TJ
+T*[(9:)-600(;;   8: three:  print "three")]TJ
+-6.6 -12 Td
+[(10:)-600(;;   9:         goto four)]TJ
+T*[(11:)-600(;;  10: two:    print "two")]TJ
+T*[(12:)-600(;;  11:         goto three)]TJ
+T*[(13:)-600(;;  12: zero:   print "zero")]TJ
+T*[(14:)-600(;;  13:         goto one)]TJ
+T*[(15:)-600(;;  14: done:)]TJ
+T*[(16:)-600<28>]TJ
+T*[(17:)-600(\(    1          \))]TJ
+T*[(18:)-600(\(    2          \))]TJ
+T*[(19:)-600(\(    3          \(goto zero\)\))]TJ
+T*[(20:)-600(\(    4 four     \(print "four"\)\))]TJ
+T*[(21:)-600(\(    5          \(goto done\)\))]TJ
+T*[(22:)-600(\(    6 one      \(print "one"\)\))]TJ
+T*[(23:)-600(\(    7          \(goto two\)\))]TJ
+T*[(24:)-600(\(    8 three    \(print "three"\)\))]TJ
+T*[(25:)-600(\(    9          \(goto four\)\))]TJ
+T*[(26:)-600(\(   10 two      \(print "two"\)\))]TJ
+T*[(27:)-600(\(   11          \(goto three\)\))]TJ
+T*[(28:)-600(\(   12 zero     \(print "zero"\)\))]TJ
+T*[(29:)-600(\(   13          \(goto one\)\))]TJ
+T*[(30:)-600(\(   14 done     \))]TJ
+T*[(31:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+65 0 obj
+1934
+endobj
+69 0 obj
+<</Length 70 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-284.154 -2.7 Td
+(.score/21-let-if.sbir)Tj
+-74.6676 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 21-let-if.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 21-let-if.sbir,v 1.1 2018-09-27 14:31:36-07 - - $)]TJ
+T*[(3:)-600(;;   2: #)]TJ
+T*[(4:)-600(;;   3:         let i = 1)]TJ
+T*[(5:)-600(;;   4: loop:   print i)]TJ
+T*[(6:)-600(;;   5:         let i = i + 1)]TJ
+T*[(7:)-600(;;   6:         if i <= 10 goto loop)]TJ
+T*[(8:)-600<28>]TJ
+T*[(9:)-600(\(    1          \))]TJ
+-6.6 -12 Td
+[(10:)-600(\(    2          \))]TJ
+T*[(11:)-600(\(    3          \(let i 1\)\))]TJ
+T*[(12:)-600(\(    4 loop     \(print i\)\))]TJ
+T*[(13:)-600(\(    5          \(let i \(+ i 1\)\)\))]TJ
+T*[(14:)-600(\(    6          \(if \(<= i 10\) loop\)\))]TJ
+T*[(15:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+70 0 obj
+1220
+endobj
+74 0 obj
+<</Length 75 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-296.593 -2.7 Td
+(.score/22-fibonacci.sbir)Tj
+-62.2285 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 22-fibonacci.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 22-fibonacci.sbir,v 1.1 2018-09-27 14:31:36-07 - - $)]TJ
+T*[(3:)-600(;;   2: #)]TJ
+T*[(4:)-600(;;   3: # Print out all Fibonacci numbers up to max.)]TJ
+T*[(5:)-600(;;   4: #)]TJ
+T*[(6:)-600(;;   5:         let max = 10^6)]TJ
+T*[(7:)-600(;;   6: )]TJ
+T*[(8:)-600(;;   7:         let fib0 = 0)]TJ
+T*[(9:)-600(;;   8:         let fib1 = 1)]TJ
+-6.6 -12 Td
+[(10:)-600(;;   9:         print "fib\(", 0, "\)=", fib0)]TJ
+T*[(11:)-600(;;  10:         print "fib\(", 1, "\)=", fib1)]TJ
+T*[(12:)-600(;;  11:         let i=1)]TJ
+T*[(13:)-600(;;  12: loop:   let fib = fib0 + fib1)]TJ
+T*[(14:)-600(;;  13:         let i=i+1)]TJ
+T*[(15:)-600(;;  14:         print "fib\(", i, "\)=", fib)]TJ
+T*[(16:)-600(;;  15:         let fib0 = fib1)]TJ
+T*[(17:)-600(;;  16:         let fib1 = fib)]TJ
+T*[(18:)-600(;;  17:         if fib <= max goto loop)]TJ
+T*[(19:)-600<28>]TJ
+T*[(20:)-600(\(    1          \))]TJ
+T*[(21:)-600(\(    2          \))]TJ
+T*[(22:)-600(\(    3          \))]TJ
+T*[(23:)-600(\(    4          \))]TJ
+T*[(24:)-600(\(    5          \(let max \(^ 10 6\)\)\))]TJ
+T*[(25:)-600(\(    6          \))]TJ
+T*[(26:)-600(\(    7          \(let fib0 0\)\))]TJ
+T*[(27:)-600(\(    8          \(let fib1 1\)\))]TJ
+T*[(28:)-600(\(    9          \(print "fib\(" 0 "\)=" fib0\)\))]TJ
+T*[(29:)-600(\(   10          \(print "fib\(" 1 "\)=" fib1\)\))]TJ
+T*[(30:)-600(\(   11          \(let i 1\)\))]TJ
+T*[(31:)-600(\(   12 loop     \(let fib \(+ fib0 fib1\)\)\))]TJ
+T*[(32:)-600(\(   13          \(let i \(+ i 1\)\)\))]TJ
+T*[(33:)-600(\(   14          \(print "fib\(" i "\)=" fib\)\))]TJ
+T*[(34:)-600(\(   15          \(let fib0 fib1\)\))]TJ
+T*[(35:)-600(\(   16          \(let fib1 fib\)\))]TJ
+T*[(36:)-600(\(   17          \(if \(<= fib max\) loop\)\))]TJ
+T*[(37:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+75 0 obj
+2386
+endobj
+79 0 obj
+<</Length 80 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-292.316 -2.7 Td
+(.score/25-pi-e-fns.sbir)Tj
+-66.5055 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 25-pi-e-fns.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 25-pi-e-fns.sbir,v 1.1 2018-09-27 14:31:36-07 - - $)]TJ
+T*[(3:)-600(;;   2: )]TJ
+T*[(4:)-600(;;   3: print pi, e)]TJ
+T*[(5:)-600(;;   4: let pi = 4 * atan\(1\))]TJ
+T*[(6:)-600(;;   5: let e = exp\(1\))]TJ
+T*[(7:)-600(;;   6: print "pi = ", pi)]TJ
+T*[(8:)-600(;;   7: print "e = ", e)]TJ
+T*[(9:)-600(;;   8: )]TJ
+-6.6 -12 Td
+[(10:)-600(;;   9: print "sqrt \( pi \) = ", sqrt \( pi \))]TJ
+T*[(11:)-600(;;  10: print "exp  \( pi \) = ", exp  \( pi \))]TJ
+T*[(12:)-600(;;  11: print "log  \( pi \) = ", log  \( pi \))]TJ
+T*[(13:)-600(;;  12: print "sin  \( pi \) = ", sin  \( pi \))]TJ
+T*[(14:)-600(;;  13: print "cos  \( pi \) = ", cos  \( pi \))]TJ
+T*[(15:)-600(;;  14: print "tan  \( pi \) = ", tan  \( pi \))]TJ
+T*[(16:)-600(;;  15: print "acos \( pi \) = ", acos \( pi \))]TJ
+T*[(17:)-600(;;  16: print "asin \( pi \) = ", asin \( pi \))]TJ
+T*[(18:)-600(;;  17: print "atan \( pi \) = ", atan \( pi \))]TJ
+T*[(19:)-600(;;  18: print "abs  \( pi \) = ", abs  \( pi \))]TJ
+T*[(20:)-600(;;  19: print "ceil \( pi \) = ", ceil \( pi \))]TJ
+T*[(21:)-600(;;  20: print "floor\( pi \) = ", floor\( pi \))]TJ
+T*[(22:)-600(;;  21: print "round\( pi \) = ", round\( pi \))]TJ
+T*[(23:)-600(;;  22: )]TJ
+T*[(24:)-600<28>]TJ
+T*[(25:)-600(\(    1          \))]TJ
+T*[(26:)-600(\(    2          \))]TJ
+T*[(27:)-600(\(    3          \(print pi e\)\))]TJ
+T*[(28:)-600(\(    4          \(let pi \(* 4 \(atan 1\)\)\)\))]TJ
+T*[(29:)-600(\(    5          \(let e \(exp 1\)\)\))]TJ
+T*[(30:)-600(\(    6          \(print "pi = " pi\)\))]TJ
+T*[(31:)-600(\(    7          \(print "e = " e\)\))]TJ
+T*[(32:)-600(\(    8          \))]TJ
+T*[(33:)-600(\(    9          \(print "sqrt \( pi \) = " \(sqrt pi\)\)\))]TJ
+T*[(34:)-600(\(   10          \(print "exp  \( pi \) = " \(exp pi\)\)\))]TJ
+T*[(35:)-600(\(   11          \(print "log  \( pi \) = " \(log pi\)\)\))]TJ
+T*[(36:)-600(\(   12          \(print "sin  \( pi \) = " \(sin pi\)\)\))]TJ
+T*[(37:)-600(\(   13          \(print "cos  \( pi \) = " \(cos pi\)\)\))]TJ
+T*[(38:)-600(\(   14          \(print "tan  \( pi \) = " \(tan pi\)\)\))]TJ
+T*[(39:)-600(\(   15          \(print "acos \( pi \) = " \(acos pi\)\)\))]TJ
+T*[(40:)-600(\(   16          \(print "asin \( pi \) = " \(asin pi\)\)\))]TJ
+T*[(41:)-600(\(   17          \(print "atan \( pi \) = " \(atan pi\)\)\))]TJ
+T*[(42:)-600(\(   18          \(print "abs  \( pi \) = " \(abs pi\)\)\))]TJ
+T*[(43:)-600(\(   19          \(print "ceil \( pi \) = " \(ceil pi\)\)\))]TJ
+T*[(44:)-600(\(   20          \(print "floor\( pi \) = " \(floor pi\)\)\))]TJ
+T*[(45:)-600(\(   21          \(print "round\( pi \) = " \(round pi\)\)\))]TJ
+T*[(46:)-600(\(   22          \))]TJ
+T*[(47:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+80 0 obj
+3292
+endobj
+84 0 obj
+<</Length 85 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-292.715 -2.7 Td
+(.score/30-input-pi.sbir)Tj
+-66.1063 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 30-input-pi.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 30-input-pi.sbir,v 1.1 2018-09-27 14:31:36-07 - - $)]TJ
+T*[(3:)-600(;;   2: #)]TJ
+T*[(4:)-600(;;   3: )]TJ
+T*[(5:)-600(;;   4:         let pi = 4 * atan\(1\))]TJ
+T*[(6:)-600(;;   5: )]TJ
+T*[(7:)-600(;;   6:         print "RE: House Bill 246, Indiana State Legislature, 18)]TJ
+-27.4 -12 Td
+(97")Tj
+27.4 -12 Td
+[(8:)-600(;;   7:         print "Enter 1 if it has passed and 0 if not.")]TJ
+T*[(9:)-600(;;   8: )]TJ
+-6.6 -12 Td
+[(10:)-600(;;   9:         input tennessee)]TJ
+T*[(11:)-600(;;  10:         if tennessee = 0 goto prt)]TJ
+T*[(12:)-600(;;  11:         let pi = 3 )]TJ
+T*[(13:)-600(;;  12: prt:    print "pi = ", pi)]TJ
+T*[(14:)-600(;;  13: )]TJ
+T*[(15:)-600(;;  14: # Print some random junk to exercise the interpreter.)]TJ
+T*[(16:)-600(;;  15: )]TJ
+T*[(17:)-600(;;  16:         print)]TJ
+T*[(18:)-600(;;  17:         print)]TJ
+T*[(19:)-600(;;  18:         print .333333333333333333333333333333333333333333)]TJ
+T*[(20:)-600(;;  19:         let avogadro = 6.02e23)]TJ
+T*[(21:)-600(;;  20:         print avogadro)]TJ
+T*[(22:)-600<28>]TJ
+T*[(23:)-600(\(    1          \))]TJ
+T*[(24:)-600(\(    2          \))]TJ
+T*[(25:)-600(\(    3          \))]TJ
+T*[(26:)-600(\(    4          \(let pi \(* 4 \(atan 1\)\)\)\))]TJ
+T*[(27:)-600(\(    5          \))]TJ
+T*[(28:)-600(\(    6          \(print "RE: House Bill 246, Indiana State Legislature, 1)]TJ
+-20.8 -12 Td
+(897"\)\))Tj
+20.8 -12 Td
+[(29:)-600(\(    7          \(print "Enter 1 if it has passed and 0 if not."\)\))]TJ
+T*[(30:)-600(\(    8          \))]TJ
+T*[(31:)-600(\(    9          \(input tennessee\)\))]TJ
+T*[(32:)-600(\(   10          \(if \(= tennessee 0\) prt\)\))]TJ
+T*[(33:)-600(\(   11          \(let pi 3\)\))]TJ
+T*[(34:)-600(\(   12 prt      \(print "pi = " pi\)\))]TJ
+T*[(35:)-600(\(   13          \))]TJ
+T*[(36:)-600(\(   14          \))]TJ
+T*[(37:)-600(\(   15          \))]TJ
+T*[(38:)-600(\(   16          \(print\)\))]TJ
+T*[(39:)-600(\(   17          \(print\)\))]TJ
+T*[(40:)-600(\(   18          \(print 0.333333333333333\)\))]TJ
+T*[(41:)-600(\(   19          \(let avogadro 6.02e+23\)\))]TJ
+T*[(42:)-600(\(   20          \(print avogadro\)\))]TJ
+T*[(43:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+85 0 obj
+2767
+endobj
+89 0 obj
+<</Length 90 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-287.654 -2.7 Td
+(.score/31-big-o-.sbir)Tj
+-71.1672 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 31-big-o-.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 31-big-o-.sbir,v 1.1 2018-09-27 14:31:36-07 - - $)]TJ
+T*[(3:)-600(;;   2: )]TJ
+T*[(4:)-600(;;   3: # Given the value of N1, is the following program guaranteed)]TJ
+T*[(5:)-600(;;   4: # to terminate?  If so, what is the big-O of time for terminatio)]TJ
+-27.4 -12 Td
+(n?)Tj
+27.4 -12 Td
+[(6:)-600(;;   5: # http://en.wikipedia.org/wiki/Collatz_conjecture)]TJ
+T*[(7:)-600(;;   6: )]TJ
+T*[(8:)-600(;;   7: # Big-O)]TJ
+T*[(9:)-600(;;   8: # C:    while\(n>1\)n=n&1?3*n+1:n/2;)]TJ
+-6.6 -12 Td
+[(10:)-600(;;   9: # APL:  L:->Lxi1<N<-\(\(|_N/2\),3xN+1\)[1=2|N])]TJ
+T*[(11:)-600(;;  10: )]TJ
+T*[(12:)-600(;;  11:         input N1)]TJ
+T*[(13:)-600(;;  12:         let i = 0)]TJ
+T*[(14:)-600(;;  13:         let n = N1)]TJ
+T*[(15:)-600(;;  14: while:  if n <= 1 goto done)]TJ
+T*[(16:)-600(;;  15:         let i = i + 1)]TJ
+T*[(17:)-600(;;  16:         let f = floor\( n / 2 \))]TJ
+T*[(18:)-600(;;  17:         if n <> f * 2 goto odd)]TJ
+T*[(19:)-600(;;  18:         let n = f)]TJ
+T*[(20:)-600(;;  19:         goto while)]TJ
+T*[(21:)-600(;;  20: odd:    let n = n * 3 + 1)]TJ
+T*[(22:)-600(;;  21:         goto while)]TJ
+T*[(23:)-600(;;  22: done:   print N1, " loops ", i, " times.")]TJ
+T*[(24:)-600<28>]TJ
+T*[(25:)-600(\(    1          \))]TJ
+T*[(26:)-600(\(    2          \))]TJ
+T*[(27:)-600(\(    3          \))]TJ
+T*[(28:)-600(\(    4          \))]TJ
+T*[(29:)-600(\(    5          \))]TJ
+T*[(30:)-600(\(    6          \))]TJ
+T*[(31:)-600(\(    7          \))]TJ
+T*[(32:)-600(\(    8          \))]TJ
+T*[(33:)-600(\(    9          \))]TJ
+T*[(34:)-600(\(   10          \))]TJ
+T*[(35:)-600(\(   11          \(input N1\)\))]TJ
+T*[(36:)-600(\(   12          \(let i 0\)\))]TJ
+T*[(37:)-600(\(   13          \(let n N1\)\))]TJ
+T*[(38:)-600(\(   14 while    \(if \(<= n 1\) done\)\))]TJ
+T*[(39:)-600(\(   15          \(let i \(+ i 1\)\)\))]TJ
+T*[(40:)-600(\(   16          \(let f \(floor \(/ n 2\)\)\)\))]TJ
+T*[(41:)-600(\(   17          \(if \(<> n \(* f 2\)\) odd\)\))]TJ
+T*[(42:)-600(\(   18          \(let n f\)\))]TJ
+T*[(43:)-600(\(   19          \(goto while\)\))]TJ
+T*[(44:)-600(\(   20 odd      \(let n \(+ \(* n 3\) 1\)\)\))]TJ
+T*[(45:)-600(\(   21          \(goto while\)\))]TJ
+T*[(46:)-600(\(   22 done     \(print N1 " loops " i " times."\)\))]TJ
+T*[(47:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+90 0 obj
+2888
+endobj
+94 0 obj
+<</Length 95 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-293.869 -2.7 Td
+(.score/32-factorial.sbir)Tj
+-64.952 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 32-factorial.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 32-factorial.sbir,v 1.2 2019-01-08 17:27:02-08 - - $)]TJ
+T*[(3:)-600(;;   2: #)]TJ
+T*[(4:)-600(;;   3: # Factorial.)]TJ
+T*[(5:)-600(;;   4: #)]TJ
+T*[(6:)-600(;;   5: read:   print "Factorial of:")]TJ
+T*[(7:)-600(;;   6:         input x)]TJ
+T*[(8:)-600(;;   7:         # check the variable eof for a valid value or not.)]TJ
+T*[(9:)-600(;;   8:         if eof = 1 goto stop)]TJ
+-6.6 -12 Td
+[(10:)-600(;;   9:         if x <> x goto error)]TJ
+T*[(11:)-600(;;  10:         if x < 0 goto error)]TJ
+T*[(12:)-600(;;  11:         goto letfac)]TJ
+T*[(13:)-600(;;  12: error:  print "Invalid input.")]TJ
+T*[(14:)-600(;;  13:         goto read)]TJ
+T*[(15:)-600(;;  14: )]TJ
+T*[(16:)-600(;;  15: #)]TJ
+T*[(17:)-600(;;  16: #)]TJ
+T*[(18:)-600(;;  17: #)]TJ
+T*[(19:)-600(;;  18: )]TJ
+T*[(20:)-600(;;  19: letfac: let factorial = 1)]TJ
+T*[(21:)-600(;;  20:         let itor = 2)]TJ
+T*[(22:)-600(;;  21: loop:   if itor > x goto prt)]TJ
+T*[(23:)-600(;;  22:         let factorial = factorial * itor)]TJ
+T*[(24:)-600(;;  23:         let itor = itor + 1)]TJ
+T*[(25:)-600(;;  24:         goto loop)]TJ
+T*[(26:)-600(;;  25: prt:    print "factorial\(", x, "\) = ", factorial)]TJ
+T*[(27:)-600(;;  26:         goto read)]TJ
+T*[(28:)-600(;;  27: )]TJ
+T*[(29:)-600(;;  28: #)]TJ
+T*[(30:)-600(;;  29: # end of file.)]TJ
+T*[(31:)-600(;;  30: #)]TJ
+T*[(32:)-600(;;  31: )]TJ
+T*[(33:)-600(;;  32: stop:   print "Program stopping.")]TJ
+T*[(34:)-600<28>]TJ
+T*[(35:)-600(\(    1          \))]TJ
+T*[(36:)-600(\(    2          \))]TJ
+T*[(37:)-600(\(    3          \))]TJ
+T*[(38:)-600(\(    4          \))]TJ
+T*[(39:)-600(\(    5 read     \(print "Factorial of:"\)\))]TJ
+T*[(40:)-600(\(    6          \(input x\)\))]TJ
+T*[(41:)-600(\(    7          \))]TJ
+T*[(42:)-600(\(    8          \(if \(= eof 1\) stop\)\))]TJ
+T*[(43:)-600(\(    9          \(if \(<> x x\) error\)\))]TJ
+T*[(44:)-600(\(   10          \(if \(< x 0\) error\)\))]TJ
+T*[(45:)-600(\(   11          \(goto letfac\)\))]TJ
+T*[(46:)-600(\(   12 error    \(print "Invalid input."\)\))]TJ
+T*[(47:)-600(\(   13          \(goto read\)\))]TJ
+T*[(48:)-600(\(   14          \))]TJ
+T*[(49:)-600(\(   15          \))]TJ
+T*[(50:)-600(\(   16          \))]TJ
+T*[(51:)-600(\(   17          \))]TJ
+T*[(52:)-600(\(   18          \))]TJ
+T*[(53:)-600(\(   19 letfac   \(let factorial 1\)\))]TJ
+T*[(54:)-600(\(   20          \(let itor 2\)\))]TJ
+T*[(55:)-600(\(   21 loop     \(if \(> itor x\) prt\)\))]TJ
+T*[(56:)-600(\(   22          \(let factorial \(* factorial itor\)\)\))]TJ
+T*[(57:)-600(\(   23          \(let itor \(+ itor 1\)\)\))]TJ
+T*[(58:)-600(\(   24          \(goto loop\)\))]TJ
+ET
+Q
+Q
+endstream
+endobj
+95 0 obj
+3235
+endobj
+99 0 obj
+<</Length 100 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(2)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-293.869 -2.7 Td
+(.score/32-factorial.sbir)Tj
+-64.952 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 63.8 718 Tm
+[(59:)-600(\(   25 prt      \(print "factorial\(" x "\) = " factorial\)\))]TJ
+12 TL
+T*[(60:)-600(\(   26          \(goto read\)\))]TJ
+T*[(61:)-600(\(   27          \))]TJ
+T*[(62:)-600(\(   28          \))]TJ
+T*[(63:)-600(\(   29          \))]TJ
+T*[(64:)-600(\(   30          \))]TJ
+T*[(65:)-600(\(   31          \))]TJ
+T*[(66:)-600(\(   32 stop     \(print "Program stopping."\)\))]TJ
+T*[(67:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+100 0 obj
+964
+endobj
+104 0 obj
+<</Length 105 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-296.593 -2.7 Td
+(.score/33-quadratic.sbir)Tj
+-62.2285 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 33-quadratic.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 33-quadratic.sbir,v 1.2 2019-01-08 17:27:02-08 - - $)]TJ
+T*[(3:)-600(;;   2: #)]TJ
+T*[(4:)-600(;;   3: # Quadratic equation solver)]TJ
+T*[(5:)-600(;;   4: #)]TJ
+T*[(6:)-600(;;   5: )]TJ
+T*[(7:)-600(;;   6:         print "Quadratic Equation solver.")]TJ
+T*[(8:)-600(;;   7: loop:   print "Input a, b, c")]TJ
+T*[(9:)-600(;;   8:         input a, b, c)]TJ
+-6.6 -12 Td
+[(10:)-600(;;   9:         if eof = 1 goto stop)]TJ
+T*[(11:)-600(;;  10:         let q = sqrt\( b ^ 2 - 4 * a * c \))]TJ
+T*[(12:)-600(;;  11:         print "Equation: ", a, " * x ^ 2 +", b, " * x +", c)]TJ
+T*[(13:)-600(;;  12:         print "root1 = ", \( - b + q \) / \( 2 * a \))]TJ
+T*[(14:)-600(;;  13:         print "root2 = ", \( - b - q \) / \( 2 * a \))]TJ
+T*[(15:)-600(;;  14:         goto loop)]TJ
+T*[(16:)-600(;;  15: stop:)]TJ
+T*[(17:)-600<28>]TJ
+T*[(18:)-600(\(    1          \))]TJ
+T*[(19:)-600(\(    2          \))]TJ
+T*[(20:)-600(\(    3          \))]TJ
+T*[(21:)-600(\(    4          \))]TJ
+T*[(22:)-600(\(    5          \))]TJ
+T*[(23:)-600(\(    6          \(print "Quadratic Equation solver."\)\))]TJ
+T*[(24:)-600(\(    7 loop     \(print "Input a, b, c"\)\))]TJ
+T*[(25:)-600(\(    8          \(input a b c\)\))]TJ
+T*[(26:)-600(\(    9          \(if \(= eof 1\) stop\)\))]TJ
+T*[(27:)-600(\(   10          \(let q \(sqrt \(- \(^ b 2\) \(* \(* 4 a\) c\)\)\)\)\))]TJ
+T*[(28:)-600(\(   11          \(print "Equation: " a " * x ^ 2 +" b " * x +" c\)\))]TJ
+T*[(29:)-600(\(   12          \(print "root1 = " \(/ \(+ \(- b\) q\) \(* 2 a\)\)\)\))]TJ
+T*[(30:)-600(\(   13          \(print "root2 = " \(/ \(- \(- b\) q\) \(* 2 a\)\)\)\))]TJ
+T*[(31:)-600(\(   14          \(goto loop\)\))]TJ
+T*[(32:)-600(\(   15 stop     \))]TJ
+T*[(33:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+105 0 obj
+2349
+endobj
+109 0 obj
+<</Length 110 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-297.754 -2.7 Td
+(.score/40-sort-array.sbir)Tj
+-61.0668 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 40-sort-array.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 40-sort-array.sbir,v 1.3 2019-01-08 17:27:02-08 - - $)]TJ
+T*[(3:)-600(;;   2: #)]TJ
+T*[(4:)-600(;;   3: # sort numbers)]TJ
+T*[(5:)-600(;;   4: #)]TJ
+T*[(6:)-600(;;   5: # Input is a sequence of numbers ending with end of file.)]TJ
+T*[(7:)-600(;;   6: # User is assumed to have not more than 100 numbers.)]TJ
+T*[(8:)-600(;;   7: # Note that nan <> nan, other was x = x for all x that is not na)]TJ
+-27.4 -12 Td
+(n.)Tj
+27.4 -12 Td
+[(9:)-600(;;   8: #)]TJ
+-6.6 -12 Td
+[(10:)-600(;;   9:         let size = 100)]TJ
+T*[(11:)-600(;;  10:         dim a[size])]TJ
+T*[(12:)-600(;;  11:         let max = 0)]TJ
+T*[(13:)-600(;;  12: read:   input x)]TJ
+T*[(14:)-600(;;  13:         if x <> x goto error)]TJ
+T*[(15:)-600(;;  14:         if eof = 1 goto eof)]TJ
+T*[(16:)-600(;;  15:         let max = max + 1)]TJ
+T*[(17:)-600(;;  16:         let a[max] = x)]TJ
+T*[(18:)-600(;;  17:         if max < size goto read)]TJ
+T*[(19:)-600(;;  18: eof:)]TJ
+T*[(20:)-600(;;  19:         print "")]TJ
+T*[(21:)-600(;;  20:         print "unsorted")]TJ
+T*[(22:)-600(;;  21:         let i = 1)]TJ
+T*[(23:)-600(;;  22: prtlp:  print "a[", i, "]=", a[i])]TJ
+T*[(24:)-600(;;  23:         let i = i + 1)]TJ
+T*[(25:)-600(;;  24:         if i <= max goto prtlp)]TJ
+T*[(26:)-600(;;  25:         let i = max)]TJ
+T*[(27:)-600(;;  26: outer:  let j = 1 )]TJ
+T*[(28:)-600(;;  27: inner:  if a[j] <= a[j + 1] goto noswap)]TJ
+T*[(29:)-600(;;  28:         let t = a[j])]TJ
+T*[(30:)-600(;;  29:         let a[j] = a[j+1])]TJ
+T*[(31:)-600(;;  30:         let a[j+1]=t)]TJ
+T*[(32:)-600(;;  31: noswap:)]TJ
+T*[(33:)-600(;;  32:         let j = j + 1)]TJ
+T*[(34:)-600(;;  33:         if j <= i - 1 goto inner)]TJ
+T*[(35:)-600(;;  34:         let i = i - 1)]TJ
+T*[(36:)-600(;;  35:         if i >= 2 goto outer)]TJ
+T*[(37:)-600(;;  36:         print "")]TJ
+T*[(38:)-600(;;  37:         print "sorted")]TJ
+T*[(39:)-600(;;  38:         let i = 1)]TJ
+T*[(40:)-600(;;  39: sortlp: print "a[", i, "]=", a[i])]TJ
+T*[(41:)-600(;;  40:         let i = i + 1)]TJ
+T*[(42:)-600(;;  41:         if i <= max goto sortlp)]TJ
+T*[(43:)-600(;;  42:         goto stop)]TJ
+T*[(44:)-600(;;  43: error:  print "Invalid input")]TJ
+T*[(45:)-600(;;  44: stop:)]TJ
+T*[(46:)-600<28>]TJ
+T*[(47:)-600(\(    1          \))]TJ
+T*[(48:)-600(\(    2          \))]TJ
+T*[(49:)-600(\(    3          \))]TJ
+T*[(50:)-600(\(    4          \))]TJ
+T*[(51:)-600(\(    5          \))]TJ
+T*[(52:)-600(\(    6          \))]TJ
+T*[(53:)-600(\(    7          \))]TJ
+T*[(54:)-600(\(    8          \))]TJ
+T*[(55:)-600(\(    9          \(let size 100\)\))]TJ
+T*[(56:)-600(\(   10          \(dim \(asub a size\)\)\))]TJ
+T*[(57:)-600(\(   11          \(let max 0\)\))]TJ
+ET
+Q
+Q
+endstream
+endobj
+110 0 obj
+3305
+endobj
+114 0 obj
+<</Length 115 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(2)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-297.754 -2.7 Td
+(.score/40-sort-array.sbir)Tj
+-61.0668 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 63.8 718 Tm
+[(58:)-600(\(   12 read     \(input x\)\))]TJ
+12 TL
+T*[(59:)-600(\(   13          \(if \(<> x x\) error\)\))]TJ
+T*[(60:)-600(\(   14          \(if \(= eof 1\) eof\)\))]TJ
+T*[(61:)-600(\(   15          \(let max \(+ max 1\)\)\))]TJ
+T*[(62:)-600(\(   16          \(let \(asub a max\) x\)\))]TJ
+T*[(63:)-600(\(   17          \(if \(< max size\) read\)\))]TJ
+T*[(64:)-600(\(   18 eof      \))]TJ
+T*[(65:)-600(\(   19          \(print ""\)\))]TJ
+T*[(66:)-600(\(   20          \(print "unsorted"\)\))]TJ
+T*[(67:)-600(\(   21          \(let i 1\)\))]TJ
+T*[(68:)-600(\(   22 prtlp    \(print "a[" i "]=" \(asub a i\)\)\))]TJ
+T*[(69:)-600(\(   23          \(let i \(+ i 1\)\)\))]TJ
+T*[(70:)-600(\(   24          \(if \(<= i max\) prtlp\)\))]TJ
+T*[(71:)-600(\(   25          \(let i max\)\))]TJ
+T*[(72:)-600(\(   26 outer    \(let j 1\)\))]TJ
+T*[(73:)-600(\(   27 inner    \(if \(<= \(asub a j\) \(asub a \(+ j 1\)\)\) noswap\)\))]TJ
+T*[(74:)-600(\(   28          \(let t \(asub a j\)\)\))]TJ
+T*[(75:)-600(\(   29          \(let \(asub a j\) \(asub a \(+ j 1\)\)\)\))]TJ
+T*[(76:)-600(\(   30          \(let \(asub a \(+ j 1\)\) t\)\))]TJ
+T*[(77:)-600(\(   31 noswap   \))]TJ
+T*[(78:)-600(\(   32          \(let j \(+ j 1\)\)\))]TJ
+T*[(79:)-600(\(   33          \(if \(<= j \(- i 1\)\) inner\)\))]TJ
+T*[(80:)-600(\(   34          \(let i \(- i 1\)\)\))]TJ
+T*[(81:)-600(\(   35          \(if \(>= i 2\) outer\)\))]TJ
+T*[(82:)-600(\(   36          \(print ""\)\))]TJ
+T*[(83:)-600(\(   37          \(print "sorted"\)\))]TJ
+T*[(84:)-600(\(   38          \(let i 1\)\))]TJ
+T*[(85:)-600(\(   39 sortlp   \(print "a[" i "]=" \(asub a i\)\)\))]TJ
+T*[(86:)-600(\(   40          \(let i \(+ i 1\)\)\))]TJ
+T*[(87:)-600(\(   41          \(if \(<= i max\) sortlp\)\))]TJ
+T*[(88:)-600(\(   42          \(goto stop\)\))]TJ
+T*[(89:)-600(\(   43 error    \(print "Invalid input"\)\))]TJ
+T*[(90:)-600(\(   44 stop     \))]TJ
+T*[(91:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+115 0 obj
+2477
+endobj
+119 0 obj
+<</Length 120 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/08/19)Tj
+-0.659766 -12.8 Td
+(17:27:02)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-305.146 -2.7 Td
+(.score/41-eratosthenes.sbir)Tj
+-53.675 18 Td
+($cmps112-wm/Assignments/asg1-scheme-sbi)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(;;File: 41-eratosthenes.sb)]TJ
+12 TL
+T*[(2:)-600(;;   1: # $Id: 41-eratosthenes.sbir,v 1.2 2019-01-04 17:04:42-08 - - $)]TJ
+T*[(3:)-600(;;   2: #)]TJ
+T*[(4:)-600(;;   3:         let n = 100)]TJ
+T*[(5:)-600(;;   4:         dim sieve[n])]TJ
+T*[(6:)-600(;;   5: )]TJ
+T*[(7:)-600(;;   6: # Assume all numbers in the sieve are prime)]TJ
+T*[(8:)-600(;;   7: )]TJ
+T*[(9:)-600(;;   8:         let i = 2)]TJ
+-6.6 -12 Td
+[(10:)-600(;;   9: init:   let sieve[i] = 1)]TJ
+T*[(11:)-600(;;  10:         let i = i + 1)]TJ
+T*[(12:)-600(;;  11:         if i < n goto init)]TJ
+T*[(13:)-600(;;  12: )]TJ
+T*[(14:)-600(;;  13: # Find primes and punch out their multiples.)]TJ
+T*[(15:)-600(;;  14: )]TJ
+T*[(16:)-600(;;  15:         let prime = 2)]TJ
+T*[(17:)-600(;;  16: primes: if sieve[prime] = 0 goto next)]TJ
+T*[(18:)-600(;;  17:         print prime)]TJ
+T*[(19:)-600(;;  18:         let i = prime * 2)]TJ
+T*[(20:)-600(;;  19:         goto punch)]TJ
+T*[(21:)-600(;;  20: loop:   let sieve[i] = 0)]TJ
+T*[(22:)-600(;;  21:         let i = i + prime)]TJ
+T*[(23:)-600(;;  22: punch:  if i <= n goto loop)]TJ
+T*[(24:)-600(;;  23: )]TJ
+T*[(25:)-600(;;  24: next:   let prime = prime + 1)]TJ
+T*[(26:)-600(;;  25:         if prime <= n goto primes)]TJ
+T*[(27:)-600<28>]TJ
+T*[(28:)-600(\(    1          \))]TJ
+T*[(29:)-600(\(    2          \))]TJ
+T*[(30:)-600(\(    3          \(let n 100\)\))]TJ
+T*[(31:)-600(\(    4          \(dim \(asub sieve n\)\)\))]TJ
+T*[(32:)-600(\(    5          \))]TJ
+T*[(33:)-600(\(    6          \))]TJ
+T*[(34:)-600(\(    7          \))]TJ
+T*[(35:)-600(\(    8          \(let i 2\)\))]TJ
+T*[(36:)-600(\(    9 init     \(let \(asub sieve i\) 1\)\))]TJ
+T*[(37:)-600(\(   10          \(let i \(+ i 1\)\)\))]TJ
+T*[(38:)-600(\(   11          \(if \(< i n\) init\)\))]TJ
+T*[(39:)-600(\(   12          \))]TJ
+T*[(40:)-600(\(   13          \))]TJ
+T*[(41:)-600(\(   14          \))]TJ
+T*[(42:)-600(\(   15          \(let prime 2\)\))]TJ
+T*[(43:)-600(\(   16 primes   \(if \(= \(asub sieve prime\) 0\) next\)\))]TJ
+T*[(44:)-600(\(   17          \(print prime\)\))]TJ
+T*[(45:)-600(\(   18          \(let i \(* prime 2\)\)\))]TJ
+T*[(46:)-600(\(   19          \(goto punch\)\))]TJ
+T*[(47:)-600(\(   20 loop     \(let \(asub sieve i\) 0\)\))]TJ
+T*[(48:)-600(\(   21          \(let i \(+ i prime\)\)\))]TJ
+T*[(49:)-600(\(   22 punch    \(if \(<= i n\) loop\)\))]TJ
+T*[(50:)-600(\(   23          \))]TJ
+T*[(51:)-600(\(   24 next     \(let prime \(+ prime 1\)\)\))]TJ
+T*[(52:)-600(\(   25          \(if \(<= prime n\) primes\)\))]TJ
+T*[(53:)-600<29>]TJ
+ET
+Q
+Q
+endstream
+endobj
+120 0 obj
+3108
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 16 0 R
+/Font 17 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+18 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 21 0 R
+/Font 22 0 R
+>>
+/Contents 19 0 R
+>>
+endobj
+23 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 26 0 R
+/Font 27 0 R
+>>
+/Contents 24 0 R
+>>
+endobj
+28 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 31 0 R
+/Font 32 0 R
+>>
+/Contents 29 0 R
+>>
+endobj
+33 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 36 0 R
+/Font 37 0 R
+>>
+/Contents 34 0 R
+>>
+endobj
+38 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 41 0 R
+/Font 42 0 R
+>>
+/Contents 39 0 R
+>>
+endobj
+43 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 46 0 R
+/Font 47 0 R
+>>
+/Contents 44 0 R
+>>
+endobj
+48 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 51 0 R
+/Font 52 0 R
+>>
+/Contents 49 0 R
+>>
+endobj
+53 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 56 0 R
+/Font 57 0 R
+>>
+/Contents 54 0 R
+>>
+endobj
+58 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 61 0 R
+/Font 62 0 R
+>>
+/Contents 59 0 R
+>>
+endobj
+63 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 66 0 R
+/Font 67 0 R
+>>
+/Contents 64 0 R
+>>
+endobj
+68 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 71 0 R
+/Font 72 0 R
+>>
+/Contents 69 0 R
+>>
+endobj
+73 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 76 0 R
+/Font 77 0 R
+>>
+/Contents 74 0 R
+>>
+endobj
+78 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 81 0 R
+/Font 82 0 R
+>>
+/Contents 79 0 R
+>>
+endobj
+83 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 86 0 R
+/Font 87 0 R
+>>
+/Contents 84 0 R
+>>
+endobj
+88 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 91 0 R
+/Font 92 0 R
+>>
+/Contents 89 0 R
+>>
+endobj
+93 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 96 0 R
+/Font 97 0 R
+>>
+/Contents 94 0 R
+>>
+endobj
+98 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 101 0 R
+/Font 102 0 R
+>>
+/Contents 99 0 R
+>>
+endobj
+103 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 106 0 R
+/Font 107 0 R
+>>
+/Contents 104 0 R
+>>
+endobj
+108 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 111 0 R
+/Font 112 0 R
+>>
+/Contents 109 0 R
+>>
+endobj
+113 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 116 0 R
+/Font 117 0 R
+>>
+/Contents 114 0 R
+>>
+endobj
+118 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 121 0 R
+/Font 122 0 R
+>>
+/Contents 119 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+18 0 R
+23 0 R
+28 0 R
+33 0 R
+38 0 R
+43 0 R
+48 0 R
+53 0 R
+58 0 R
+63 0 R
+68 0 R
+73 0 R
+78 0 R
+83 0 R
+88 0 R
+93 0 R
+98 0 R
+103 0 R
+108 0 R
+113 0 R
+118 0 R
+] /Count 22
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+/Metadata 128 0 R
+>>
+endobj
+7 0 obj
+<</Type/ExtGState
+/OPM 1>>endobj
+16 0 obj
+<</R7
+7 0 R>>
+endobj
+17 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+21 0 obj
+<</R7
+7 0 R>>
+endobj
+22 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+26 0 obj
+<</R7
+7 0 R>>
+endobj
+27 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+31 0 obj
+<</R7
+7 0 R>>
+endobj
+32 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+36 0 obj
+<</R7
+7 0 R>>
+endobj
+37 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+41 0 obj
+<</R7
+7 0 R>>
+endobj
+42 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+46 0 obj
+<</R7
+7 0 R>>
+endobj
+47 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+51 0 obj
+<</R7
+7 0 R>>
+endobj
+52 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+56 0 obj
+<</R7
+7 0 R>>
+endobj
+57 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+61 0 obj
+<</R7
+7 0 R>>
+endobj
+62 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+66 0 obj
+<</R7
+7 0 R>>
+endobj
+67 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+71 0 obj
+<</R7
+7 0 R>>
+endobj
+72 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+76 0 obj
+<</R7
+7 0 R>>
+endobj
+77 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+81 0 obj
+<</R7
+7 0 R>>
+endobj
+82 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+86 0 obj
+<</R7
+7 0 R>>
+endobj
+87 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+91 0 obj
+<</R7
+7 0 R>>
+endobj
+92 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+96 0 obj
+<</R7
+7 0 R>>
+endobj
+97 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+101 0 obj
+<</R7
+7 0 R>>
+endobj
+102 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+106 0 obj
+<</R7
+7 0 R>>
+endobj
+107 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+111 0 obj
+<</R7
+7 0 R>>
+endobj
+112 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+116 0 obj
+<</R7
+7 0 R>>
+endobj
+117 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+121 0 obj
+<</R7
+7 0 R>>
+endobj
+122 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+14 0 obj
+<</BaseFont/RGSCXX+Courier-Bold/FontDescriptor 15 0 R/Type/Font
+/FirstChar 32/LastChar 126/Widths[
+600 600 600 600 600 0 600 600 600 600 600 600 600 600 600 600
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600
+0 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600
+600 600 600 600 600 600 0 600 0 600 0 600 0 600 600 600
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600
+600 600 600 600 600 600 600 600 600 600 600 0 600 0 600]
+/Encoding 127 0 R/Subtype/Type1>>
+endobj
+127 0 obj
+<</Type/Encoding/BaseEncoding/WinAnsiEncoding/Differences[
+39/quoteright
+96/quoteleft
+126/tilde]>>
+endobj
+8 0 obj
+<</BaseFont/CGPDTN+Times-Bold/FontDescriptor 9 0 R/Type/Font
+/FirstChar 47/LastChar 58/Widths[ 278
+500 500 500 0 0 0 0 500 500 500 333]
+/Encoding/WinAnsiEncoding/Subtype/Type1>>
+endobj
+12 0 obj
+<</BaseFont/LCDRZH+Times-Roman/FontDescriptor 13 0 R/Type/Font
+/FirstChar 36/LastChar 121/Widths[ 500 0 0 0 0 0 0 0 0 333 250 278
+500 500 500 500 500 500 0 0 0 0 0 0 0 0 0 0
+0 722 0 0 722 611 0 0 0 0 0 0 0 889 0 0
+0 0 667 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 444 500 444 500 444 333 500 500 278 0 0 278 778 500 500
+500 500 333 389 278 500 0 722 500 500]
+/Encoding/WinAnsiEncoding/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/SQFGIZ+Helvetica-Bold/FontDescriptor 11 0 R/Type/Font
+/FirstChar 47/LastChar 50/Widths[ 278
+0 556 556]
+/Encoding/WinAnsiEncoding/Subtype/Type1>>
+endobj
+15 0 obj
+<</Type/FontDescriptor/FontName/RGSCXX+Courier-Bold/FontBBox[-21 -205 623 695]/Flags 7
+/Ascent 695
+/CapHeight 597
+/Descent -205
+/ItalicAngle 0
+/StemV 150
+/AvgWidth 600
+/MaxWidth 600
+/MissingWidth 600
+/XHeight 451
+/CharSet(/A/B/C/D/E/F/G/H/I/J/K/L/M/N/O/P/Q/R/S/T/U/W/Y/a/ampersand/asciicircum/asterisk/b/bar/bracketleft/bracketright/c/colon/comma/d/dollar/e/eight/equal/exclam/f/five/four/g/greater/h/hyphen/i/j/k/l/less/m/n/nine/numbersign/o/one/p/parenleft/parenright/period/plus/q/question/quotedbl/quoteleft/quoteright/r/s/semicolon/seven/six/slash/space/t/three/tilde/two/u/underscore/v/w/x/y/z/zero)/FontFile3 123 0 R>>
+endobj
+123 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 9863>>stream
+Gatm^$!:-Xf(NOnaf/H\M8t5%"J"Y[p0)78A$o&k%tIao&]0b4@8)315hLTP&jcj8V@[8L'IQl0
+3ji#C>&/K>hR9n#]re^02-/K"j0uT!p[=:W#(_6tq4I\<LEYiN4fn=ZGJ.eZj$n:)'5h]*c`[s-
+`XB]DB<N"<+(RU'bD^LP`k+#[HR,;HV]JVmE*akL<d6d"2o6#_n,O[qX2iP/pL7)T_RlS9oEE+L
+bq16n\4S#AN>I=>8:7?&gpVS+baGe`5FMQ*CTmOT89J5.>of4R%$1(PK)\@KM\_.Z_I=gpql[e[
+7n3qSID_gY`=WEj+U8O4*Fp8H'bVN&jh!u!/JO+38\WYS:%qpIDr1EFpr=S.@Ea;@"Q)qJ=HW&A
+?ZlhU4s:2@pPRUgU4?8'eT#NIY=VhHGq3l?de`$d%4MN?VM8t\46Rcpq9YGsXV'<@gEUo1m>R(Y
+]l_C9;`"D6D;"P!5r3-Wce^VDmCE,Wc'L"apr]=4IK/<9Gf"50QV;^r+=7YhM2B.d@L4cGfLega
+[LlGomDMt5#;M4j8PCLT&Mo7!`(XVNZ'(JC";%VifgHsfR[?GF&T8;'M)E46@P'=,G`,ZhX<SJn
+l\S]!%E'H",Om7gM=;l.'/(#(Jko32-6XM',CG>V`,K070nOYApa\(^=@S5nQ4kn_.u4uJ0-ZeA
+&YfZ$(dkr(\.RSN45iPO&7Z#B@N<3-`Y3^'\+)[1h%$q.mVf]:k#(3M_R"k>-<HDgF'GVrcV8cS
+g9>Y9<t)ht@e5D&cc;'A7fG0Cp4]t^\GN#ECRE]ohB^sKd?;m!dX:nT0u>[FrDKQ&`b1^cKsC3R
+O2i]iY8mS'QT)ST5Q!kI2Zg\]MnTRHc+X_d(AjYo^mUj_nF=GIM.mWA9H#g'q4rG&7$B)I]earN
+AC]bA;uSQ6k1"ZTgSW5_2LAWOZr>Ei9TPS?h2H\:a3U2:lYYdNOj#JoIa&@h>FOqsbU[W5?*fe@
++le)6=/h<2Q"_?M89M49V-\#_W<EtMOB%r1?WU@,f9_,1?riP(kS6-i^'LAS-J9>,P@E^]$Dk-,
+=bT.YcrpJC5)JEFn`#*4?hSK"9gr*\S`W;3JV+jT`N";?THn'm2%C&!dqCr@-/?=F(MnZ[fHVtS
+5M9J0r?^;<\=6VkcR)XW$fp$oS?u6<##Woba)`]*cuA#r8up2$hMOuS2(B'k>Ocg[C=&HBR8j@@
+PJ#3pS8BbE(jEkE#o'$igk1H_;0]Wa"TRht>,j$ViZK>GkCW"K-UWq_efH6q#Bg*@/1?m+=;O`:
+6U/37"$=`2Do:o>m=CgoOU2LRoId1DWDf:,C@JOSO`8s>2h-9`fWhGV^gg-K<&SrZrFtfBLr2_O
+h9VoJ's?^6H?G(Q%T$`4*Vn+0&,L8&5F)j!*#Q@]J2es8L(iK)mRbd$Y*2_qhlP8s\:h-G_UPu@
+]K3#4<ncA)g>Qn\#J@q?U<tg9R=`*!(e@DRlkfI7Ne'#2T--?amSs%pgKR]0?aFmkJi2.DqqLM=
+56r65A3qkcYQ,4((i!cp(b.QAjO%dJ%;5lVF]l:A=fc/93gYfo]5(!;ZsGI+NVB"Ja'22qAY@%u
+F[@EuK&cP.fVQ,$ZeM<U<))Wa5(!eg3G@u0Y':M2Q9*fiL>>d/:ji%@0Soe;T#AfH[ki*m6Ano$
+p;K.+47b)L]5?@9U"_^?bsB7o8G%dI*>ctP0-Cf#f2"T1BKFCVWNEOZ)QI+A,L4BSP0<Z1&HHiG
+]I[$i%o?rX?Z4U$2n?\OqY@<HX\)_Z^HlVU-qlUjOK[67F=NKO'UV1Sc;7]GcS#<Ae3CI9/m"su
+;nRBe8uY!s>T1]5A>HMM5p:Em[6q@Xm8H+5`"lYS!IZ]p[.HBuHB3Q+UED_i(Z`1W6lH[d3.iV3
+`^;DlYoSe+BJXl.9DbKC]rEof*,'mRa_G5M"+IYq8rEO+5]%h+F=)f-!Lf;)jG'JQ6QhP<F&TlK
+L&RWeRO[&1Wq]UfZi24h_OKLEf%OO+ps`&o8Q)<'?l$8bZ(Lq(]N]IV@`Q%5)rN>kQ4)k#:\[&@
+_FG2K?RJ`KeZ$Ubp+@E2n=Vl;&i_4$'%%gY^CBm7_-F2l,=3(b*>P!Q)>(C:ZQ3AVHSDKIcs-$`
+'j=Uu0oFF7oaJ+]4tr0UrarG?Pk=".Su[\$7g>On0lP![qG*Q;`h61ik<ZrW1ZnCh!]1"fdJnSI
+@!,F@G\j)s5"2CU!?j^ALp)c>:2'mVTXhA9U"W]'CcKgZ/i`B0%i`04&]han0Ur&B9nJ%GAYE!T
+.p&$h1)F+&^e-m&([+.NY!1U+=s4)*+B'^Ee-`;ja+X:h*:OgH>l:h#:hc#Zn\a0Z1Z[kPNIist
+G&dhlGn4P0nTpS$Q`j[g`;>ONK!S!EVq#GE'kL9+^'nOe767#F"[pjXUusf5Up)MZH[QBVVrA0A
+L5hR\d5WljUuZ2kBCq.`G<1BNhGL*$g-<V;LfrW[J=T%t0G;1#,]DNU596eA)J9,+XKi7^1!9]u
+qO/=,L"_nn/r6r*)'_Bh#YTMmF'k]S@AE..8@]-]ad6LiVjAo[$uX/<K6i<hlZ.n@#,Q+]XML0*
+3J_kt>ec'[GZZi=i:u9!>uCWi_$?\5.+7\1`d;YaQ0b41qp6?Q6$EiO2S;Ht'2;)8/R[-IN-GX[
+@+r+21/!j*WD6=\%os[s"gSiMB\ViGYD5GORG])[<Hbpa8l_;i1+:8Ij:+1<9!,@GjUnI@%PJ*7
+2dPN5=!ZB(8qYWpWW8k\=&>W0:V!..MO-q"\GgV@go7bu"Yo,4--H`:oU<Gb6>;QK&+ii?\ag+U
+S!D)R^4U@/h.%FUqCrK0Zg]R#VDFKi3bN>L`Ru`2*)t6^\e?dk2.ThC5ueKK#Qi/%%FNc!j5:hu
+P7'E'S^#E=NG$I:^g5<TBSb#("&PfE.=3LFB?2UCEUX,Je7-QXW#[Kb!=Dh=6:b*aa\M=D=<G:n
+pT@fL/&3oT2&Eo.\+[c>o)[agrX4)S/scJ-/EJ^9OWBJ$=cUE#MM0m9E1MnaqY3\N<"EZu4VCjO
+K(R3kZu-!q1U0dl+HBVB_&\@0DONVDU<$F)m"4<;0?\.Vo8f.U90k.@9<&TIeQQN&J"IuW^'fSp
+;/p3IVHBl(<KpDm`S"\4`=33L8371e%?:9rg]9B5kVZ,soDB_WX#ige(`q@8:g!f;qS@*m5k!W!
+ULt67)4H("iIitl(?kA_K8o]N_m,K+brJ`>c_8V[)Zm4IoM8NO85D#)a2UH#*@hUYLBdBYMOftf
+0XC='_lbA2mtf9q!7YUXc$9>+`2U*CU?X!onk8Pdc1k&<V/h'49N/gMN&0BIBJO_%V1O0Up(`K\
+dFXT^SD&`iVB7sb8=T[(K&Z>d<UHN77pWbV"8K*%F'g7i=-kj-"qu*>2MH64T(0^[]F7<Ya:1UY
+$3s:8%\k1cnl_g91V8KsYG:PH:[g%44_O7hkT"-gd"<1HV%ol\GO/.dI?K0KEHT')4eP%L6e_\Q
+8&n.3S>/bMOsGd[LBA\2l3")dT35XSpC40@@ZI51X5"fjI@,Bs>R+=]-X4og-pIo"TR)Ui%U;N]
+60gN)aa_)JRe'[4qt,Nk*&7gkF&_E5V+SlW=f2?A;Q?)m7C2sO!mX,Q1Kn`/cE771]I=qd^9<oC
+N&%kHZ\k8a8?=,F7Je\5_>?MWI='hc@J;hY4&eFRF!\_KO+GVcW13@9#881W\<$Q-`FUkU?q!Og
+&3h%21J"6LWtK8q;uY`rIYY21YSg7r)e;9dKR9@O\f_>2!,LTf"XJn8&KmNGnWj-lldnjRkP2^I
+nt7AD6b#9r-_U0'Q<,0?EV-#l[VU)uTEiII*6I^nrU,C6;Jsc>M^J9cpAl/2VacOfK->Hf2uZNj
+24X&^U'`-0?+Q[V@Can"1_kgs`/n<%6>OqaD`I\DGA't"(`F.h9CeT-oMQo[UP3t'-I^<\]!iCG
+_*GL(k4SD=#c&2J<+bn1Gl+*d0>V.!pjb-46X9$hl=uX8i+V36N@(FJ6>^`mM",JN[iTA`[aZd!
+77P,LpHJ20=3FKl`!;@L.T@DKFa^8ePMX)-s%%0a0V<C('WgN##+g.hL`.]-HU[s4kl@UKAQA"D
+Gqlrpj#ZrL>cI!Jh/T=c._#XG8@TF_3r&@@Wo[VEfIPc2Uu:kFqAa1kC_5.:QO,r'&>fiqj$dEc
+`a1n^oY:<8Z`1L<:11Cc)pe7-"5l9H)ajQ8OmcbraJ"$0[>VM2OR>KFO-s[kK61#,1O>:N.s"Q%
+f3'"GPrRd0$KrLdi(P04=g"iVp"!MNJ]#*&,YV_GRp@.V<j=f:n*Mqkb>L.u,p3gI*6YC_!0'2@
+7[d,QqfX;S'rd2G<0*Dn#;]p11Rc=H/M]o#9[`D@>(R1;Ya&fqR#36e=7'`5'q>fGOn9$I3&cgE
+/17H4XB=Q:E%RNXbZ61gECj<d.@LCiJZM]Ge8nhhI!s5gC:+Cb%;hsMi&#+I>&fc@.1`<l-K])c
+)P*n0DaDMq7TU1o@duKnLNbI/I1@VY4u=76%Wd(ATa*^(5plmEQepX>isNLal&jqE#>l,TSODL7
+-fW$=%WWe>BC^(aJTb9F8BT6#_,Ud,e<k--i97^24P!G,detM5eueMW;9i2eDD9++__S1RI+:(n
+\ZomTiMs$VWHC@oc:''ZbZW/k\]=*<fj[3]MDh1f!5$EJRkk'A(dcq@!7;28rg(7[c!VFASeV*G
+nCn7R_0W>gG$E#$Njl2;I>7@Bn^:(4<!9!$Y[B-QPGeI&VE5eA=;Pn5"Q:KG'nS^o#RF'lp$pW*
+B$^UJ9eCL1Ca>V<'8^r#YQP3j$AM>D@i(d/O@^eRX"'PX@Hc,NB["hCGSH\l;$f%MK=HD'aQ.j5
+U$d=t34%PVHf*T6E$;HU50ek0jSfEZ7oPN4AE8`i6arJ&m[[]8/8+ac,pamG_=G'=XN]2VAFen1
+`+K=-Kj^6Anh*p]O"PeBHL"iV(=sbS4"+0Ca0!Joru:G*'(^WCF3oj/A[E/b!V((f#L7o`pbH+P
+F7eW7h\GMC>[RLH:/meqs#p[-Oo&p8AkZS&,NM,9YC?D9^kJWb_Is:nj'?1as3(LsdE?8\gW8N'
+o@:j%=dg,?;/=6)!gL*m\tMSo/hRo-kr0B5i4F`IfJZfM.!VuqQ--&Ep,i/de].QigGcD@c2b*'
+i<DfWS,,49chGlf,(B`djepE`*N_:/3[j2HrsQd*U\',#o05pVO[H&#BdCUfKYtmc-R6':%uFC5
+5f6,?.KA=`UE_aYjtN"`K?Z^D=H&oXPG]THjSeCD3;2@2ZBc!:%draPOk]Yu*<taqG>ksu$/N>p
+nok+^C*#ErE24\o,5R5l[ObdnEQbY!S$%6epVum@Z+`YjmAoXo/a<"tH$1hGA7"9_K=)V$Q`C5a
+i!SZr3EGb#e]SI(oUt+Tj98m[ZX%hH2fH)-np-",HQ0qrmGG;(>:Rfs!?!2`:9YKOndCES;^F@2
+=Or%lm#l1B=.aO$E,OLA7UX]S<nkh&'/&'VM:JkONE.CbVdq8uA3^XSH'0A/[ne(\G;sK1$tSKI
+A5g`H/^;.rlA"I(kQs7%Gd;bem\16[mSO2e]A7n"JVJQ\(Z&@.H9+IX5[]N&?MF`qlK)d@=jRF(
+Zc^b?dgp'm+bc5eop]I"5-9:#ddS5Q^\'QT"#lD:eK=SRhNrU4e6,/TO`n7U!SM]&AE2pHacj%-
+aLuX!p#WM^1LgSh/C0@^<!F62iLu:F-gnDb4U9iAI[bg'NT$Xcs,RLBZ^841]I-qe4h3L5U@nh.
+$NEa06%&?p(Q='c(1@4ALl4N'Lp"QE(tctbZ7G\O.F?/0"V1HA5^<#9bXdok.%RWiB\3GIXJ_9L
+p@T)dpV_\=0fBpt0V(\:19h-:)(8LBpk\4E9D7:V?^S09b-o;q(LdPBWD/7SnrGQNfi@V.9N*]!
+./%S=>d80V6`YgBWWtdpXOLksVE;1#gLt-p?L,,ubXk=L`J6&,r:=op1>]i_IJNl_:G/N7#]12B
+f7fW!0eYIsjX1u[94TmshPWE(hnO/+*3/0<7fcHQBS2e#qeU(eZ<OC*4"PUi%M)u"aEV3d78LN5
+^nY,Xp,VU*@/uI%JA;+2@"Qef6'R5,g%Yj8^uI6i4ol-@Hh-2gq]C"FL;W.T/6/Cu*3rcl31>Es
+)FnaZ="2i`["A)CO"T;c_5>9+OEILDBW>=hUK>*siHf/*1^Yk4.nl#eAS,I'5^IYQ0FVTb_%*Ja
+E(6#S($GmXrQMOW"F%Vfl\H58M*We-46+UW9g>^9VGk-GQYtm"n""(sK9m7agO0D9quD(:g/uCi
+n62gJP5gP0D_P4.9o$r#-Psl(<+\*:3/ZE]s/gjQ=)U8%*Zqg$/.=<DEh,6ej;=_#>n^5'et,O.
+7P7e[gO<`6WQ9//GJId/epOLnlDaV1i(g`u>3bCuYl)#.pAdem;Lu2WB'K]HY,0GKAj:2.o>'^6
+.XAl@4kT4iGitbBAqN+Wj['<1"4>Yua4Q#9DHPmS7j[oNJK6'S_W?3rEhp":IU&F0/eXhH&,Q$o
+)A=X=fXk<jc$F2%X'QD(\;>&>i=Wp0:rN<Kqj$7JU1D,SIS=gYq&l!3aiXldGAe`@gZK236N;k%
+E,`5b/sC[YYe1%epHOO&0+CXUQcKG3[gXU'-BcPK;E1c<S0Mg#iL*`>X+0"_&.?Gk+>QTNADcTC
+p;TNV?4]4-RqQJe4uGgC&QJUW,&M<p;/X+W`[!--#:cCfajbF76kS;"8eb3u.ETs<*tp>p'UeO_
+]aK_hMa8Mb<#R&PV]K)R@92*q5-p#QG;M!k0T_k5-`>HE.m]#QXgYgW@T(0&n5!"B<Tm(@NDH+@
+/mb[(aj/tf)3YFA!4?A1RnKK6;sJu=]XCPn_X29$Sb^ASk^McPY3H:b\"uL4H#MoACDCQb.]t0[
+;4Coq"g"A%D8MW]%X[UfH%jGg>BGa-Sq@,eLUco"F%-%)1Rh>dhu4/Q'S9IS&(V>:LdYkIJF7L)
+ZsBHS`rELqfuZZY4m4aoRj5tHebI3Z)<F>_cE-&9P,Vn$h\jW)XP7&D3>:n(&tK=a'^<_r1"k6]
+I`WuN=t&7u`dkF*agbFa.ufTa92[$fF@p:?0/r))Qg"2Ra*#?9=;U4Cl;K.'4SEl<HM+cP:i!(L
+WN+S/oK\gTVDM<g^gEdp`jM4q,ZC*;;LO'V?W3WCds;h,S)ktn$q^kc7Ee@@iSCmS`lO)!"Y/Go
+%am,=130eZ3GPZ7BL&R]ZUXB8=#opB@+II]5pq7XV'LF7EncXE"(-T6>7pT>i\^!RQ"0DB<*.Zj
+[7(G/?k)aeqAK2<*]<rp1%[;io8A-]WlLin?(B-Ui$spnAG:>cm&-D06*?CsF)P?$i\m91FN4B(
+o<^2ZIs;qO*@TRs0:+MGnqt>enG,_Tc@W7(CjPbqoYQ?l1P091@;+6r\uh["XY%!?O<BNF'GD-$
+IO(f8!Kf4O)n6UN-8mSUS=-Q88-QJbB@BO.),,mYq'PZ38@9@t8VsJ])lenoUG_t]d/=Xu%K6@S
+4WJKD6Vd"$N04=AcWP]20bh<J[4DpUfF/jANMPE?.'d"N(I,I?W_0)9;urWfR[X*$CqZoBYku^q
+fih$BA\dS@Q.3f(F)j-0r'_gT5ImGQ4Y%N!SrKW`E#72jMK88%^aD<C+r6NB\&fXGI%$W%Uo/cM
+94*#MSUJY-[,BhR\8^X5CeH\p+*%eqdqIs#Zf5A+B;rr_/q3M]7]f?c.36GcBJGsk*I-_?=$*,^
+:-a`Z+Z4fqNo8PSNMF3,0*n;]Or0O6c`ZeC-#0!Z*m_7PW>R:0?17MkNT9kX#B?VM36GYZ4j\T4
+D5aVbXp!H[Xue)&*T/-:Uu?8<W/B2><B@g!QE<f^&thBA*UQ2XWC^ocj2=E,Ts`Sl#B'$cX;@b5
+A@N;MXUaO.f]gC0bNXM'#!DQh=39MZJ'\B-%]'f<:/W=&A13*d55Op/99cD9$D?mFYE`4*9+<Ia
+m,6*S(,tAEjro_s8a(rX8lBf#;W)%;.kN:$l>m?d.:dTK_!^n*H^]s@0LRbm61e0m7:Bt.jYj=P
+"JlCA"*TTgJ9fWq/sp9Ud^ct9r*7BEE#"nDCh`:LB_r/75b[XqV4VjWFQZE>g53?)jA$+i]6\Vh
+7o,YoM+^'Xd3rHoW$3H"`;7DU,Z[8u?=>/[],FGrlm[G4)7r#<E,ZfVF@6'@4Wno'e]niGJ%mi8
+EO,\qFc2d_f_JJ90VN[dhVYJYf%3(_^@iDRKe*+Ihk6*9[O$]anqGJ2JKTi-X%BCrW\g"Xnk5GB
+ndWTRld<"]5i(]f\4;pP3-Cg#hglIj>)EI4"=EVE^OV=KdaXe+b%5]KAu=StL>/q`iR'B:8[79t
+Zt?GuPdXOqV*(6q&-37AM**sr.S_t!=9CI3R%h*2W?F>f'2YFA7+%U0KlGOcQV>Z%"Wa_R/)V>U
+H)Pde)qLFdNa(6jNs-n/:Id9s*T(/5%T'mgG&7sq9Bo6J7=)Y?l):`F18&NWMVT3aE[]:;M]K^<
+Z==_fJ*Kd=SUiV'P<"P0?!,apPL(B>Ge79>kTd[!ESL)bb!D6_^St_i$kgj9=WGK%U!!?f4O7t.
+jr'IB.quM3O96I=B3duDA5lPqK>&bKW0De3qR!LF:`l88>d6-Ld)>T3]"/`0bc!-b#F&>R.,KE&
+5904ORcW==60n'`Mr5KW8'c[8SrXV$jPbLLr*ad4pXkI.Me>6[5Gr;TW;H=<#C946>EWjS(pnTS
+fkP8<a7icpSGQL2CMsOQCku:"(4]C"DchXPXaO"?%JUL)YAA&oBre`DY#:AQlMV$9_G^(1nI::I
+f:VMJ4U%d.:'GQA*u;G-I<aLj1=j,544h=L(2.s=BL^UNX>I$d."1)i'C2csV6-SA\<%;B*d56-
+OPBM8Q:>8b-toHIAAO46Wp.1E4;0-;3eT*$H\K=EF^BB#-GKS((;s1LfRT"l<)aPg;?p%l;!AKp
+@Eg$QL#"]]H$1$aJ%W_sKingKU#0^rSH>-,qjai$(K#7?9\s@8s)'6WpNT&=jR,`PIIF:kUZ%Se
+GQ6UmIK;AO05bI$cj2%oDk7Hr*O%2Ej2QML(G;4q]d_l&7Q/R'/qiX!#X#J;D.)+Pc:dO`"l5sW
+a(&"^6+VYm]`M-/"m?AMXc9R;qi`aeIEJ_f1%\s]kCs?H%q[u;85%=.\I8@d&nL+G%nhfpq+;V@
+&rGi1fsm+3IspnR%g<be>!E8d^n&uia.3\:aM2:@GRFYOKSKmFV="B=.)bq)mdH^e.PI=P.j1/o
+#6okM#Lq&t*S50LCOc@bl_.D&*)])ln9=6+mE??W">7j#cEE)*MZZ-u[^]sW8^QOU1=9"geKhkt
+=-7,gXGuVX.bC\Aj4LDPrSH%EG)k5(J"1p:8[TWfE^3"Iq9gWc/QPc0(?MQI)J&``<$aFZQWKg;
+)rX]?-gV"RMDhUq^7NmEA]4j`@8V#=?<IS>l<TJBG'=7$mQDanYVDD0l@.nQ%J$rYWuU`&9&he2
+@W-<[[<Y,PW<s%Pp@DcWT-*@??DAWn*L:J[X4n^l:-?2Z_ui23rX\Bo%+8IN`hbO(;fUS]Z7R$2
+)dpdaSI^oKQ$H`!f;='(C4B(@qAm35)HG)NMGC-D0?S75,Nm1658V7"?F7NOmnh&[c).B16L@>j
+[2<8n;\o%Q0hc6$A,@Y2E1^6Mg]HAa;mPHCqD`9#GuNsRPP6+c67!BjD9(u!4jfje;SXpu=3Bg]
+Zr(WnFUQYFp6Dr$\[n=-PR9,LTh6i]b0J2UbKW[5oMu`@o!@mdq,ouN3.YTU@Jg#&SllQ,d/.:j
+#=FQ.c^[")D*JVJ%2Omr[P7"ud*#n'OH5,Z)ZHLL`/$o.SgT?o$T2>"mJ~>
+endstream
+endobj
+9 0 obj
+<</Type/FontDescriptor/FontName/CGPDTN+Times-Bold/FontBBox[-24 -19 476 691]/Flags 65568
+/Ascent 691
+/CapHeight 691
+/Descent -19
+/ItalicAngle 0
+/StemV 71
+/MissingWidth 500
+/CharSet(/colon/eight/nine/one/seven/slash/two/zero)/FontFile3 124 0 R>>
+endobj
+124 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 1166>>stream
+Gar>AD/<-^(k$>7hHjnTg$4Q_D=*=&XJ;8l%E^`5!ZarDCWJ8!7^pgo]<:edG&+RpLij;`Yr=3V
+1),s&m8bgf;J5pkpbB4eKTIl^LeRW>AgUHNM19bfIAa=p1&g[gPOk=94QduF67!74;3[g2)rSUC
+gBG?=Fkn0@;IYnZXHnU9@]7WtX%'_XQ'GgT'Iug/rRk9R(Wp1I5o<d`U_FP,S[8`t=J+3o'B+%[
+g@j+^p%A>>7^Ldl\RPRg>VdJqH@jrK+rK8:67BVS,?m-Cn_3I+*ooH_=K!Uk3SeT0^&%GSe'Ip$
+SR0&i'G:U0S[FJ6)%=N>icr?&%Cl8P>al:D#!&/\k&taH]\D0_pqM=j@Q#-`VTk+_-A9sEE`@Th
+kRjU[lVJmRT\';q.=rD*TkYtpF[sk,3A(f.5pi$KQkC+W(0Xfb9nrZ4OSqk>M8Sk*6(Om9@"Kj^
+8R]!QbW_)[F1A<cpAP9Oa:QrVU__IqhM"#S"T&DM'3;HDd`pe-7kLp!L4V(l*5Tk5kWJ(9&<hbG
+i`FT1'<S'2;fp&OEI</5(i'5E'YZ#bP>d-touc/34Yo-FEoLp#NOLU*)XFkJ='.I@%j';]0O[h@
+PT*@=5*$KtnYU]a#1R*4ckO\hPuR)P%i_BuelQ1]_$n`?n0C-qrO3m+`4+:kT"[qG^AW\U*f\o;
+kS:N]Bf^>69)9J**)B&]pRE0^,N&iN7,*,103W[lA3DY$&TQ:uOG%iZW[Y3^d)`A+U)g%*QD-%h
+8A7$@))t/#qaso_li"sY(EWFG+q:A:!\B^)9@TVZ=LAQ!@?GDb7cM+06/`*1*DF]g/YE14nf:R+
+FPo3hTMaOVqpEok2qBQD1Ii.Td^8%3NG9>LSSJ1Q2Zq4[fZg%2cJgi2T?ZN]/pCIb7jEd/RQA<i
+5]'<nn2BF^6`rR1ccji(=Cu;s[Gc?3n/(Tg">p\^TETs)'5)kh/>U"Ls'tTQ4U`eE[VZ-biCLLV
+8#j\">?cX#NLtND6?@\,2a'SN$Smfp"a2.TEbtNhCWE0iO'nhB1(Qi^c@'ppp!-BE9RC)*])t"P
+cjATK(K1N&`k__a@%j5"$u@<[mb4<#c;3W+I$s.^Z"r=aP"qV;lH"-EkB"0XQa:JN"r!^e!IGLP
+j;QqjPESTbE0lfc#lOiL\Xer~>
+endstream
+endobj
+13 0 obj
+<</Type/FontDescriptor/FontName/LCDRZH+Times-Roman/FontBBox[-9 -218 863 727]/Flags 32
+/Ascent 727
+/CapHeight 674
+/Descent -218
+/ItalicAngle 0
+/StemV 129
+/MissingWidth 500
+/XHeight 461
+/CharSet(/A/D/E/M/R/a/b/c/d/dollar/e/f/five/four/g/h/hyphen/i/l/m/n/o/one/p/period/q/r/s/slash/t/three/two/u/w/x/y/zero)/FontFile3 125 0 R>>
+endobj
+125 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 5266>>stream
+Gar>HGuR_o^-47uqc".XBe%N!E*KBV<=s)Mg1or(dhN*!O[7,4@8'3/'1,/Z_QY1K6:_BD0S^NV
+&ok]:>.)pBe@@/WDqeL(pYOWth0jO;\(3XGl`Kp%>q7EU-[Y=>[(kMmq[S7G4c<]%(g`mb@U[if
+&;`A!h=J:B>0NYrQpiT8(?"iLhknk)98K5FjuhkHKO1u(hcQQ@62t8A]&t=:Ws"X&OIKI`9;Hj$
+.7qY7Id\6d3V)>J.ouZL5AN/pguoQHpO=]BJ\nLQUia@_oT*7N80ScVe$D:0gJ72QM,KB0-&M2g
+a]X(4#mnHOc`s]6OYG$uB8S*+.[B)k]sI[`IVT#eeuYU\f'Q6Fa6."/]o:`b^LX*HOC*et.7Y)=
+q4B/?6+jlg>p9a%fTDSeSKj&Va6+JtQQSsq8e+E)M-'MV%Tp(2^%^,1-&=L:"2mJLR!>)++dN^q
+Lf!(b&OqEegP?,E3tY$e')ofZ@OJF=fM1]UhBW"dlm)3;hSag$<FQ!f6Z@k5#VPX._'52m"X[gp
+6K0'H/OnJG_(6Ps9r;g:n*Ku*5I1^L9A+`$%O_L1,nH*h?Wm%ol(#7DpZBK?SX;M!e`1etl]Kf&
+o+'#dcMQF%krgqSmJP.,Z1i>aFJ824l;'%PFI89hWC^_s^4XV.CVDP^:70Gq`QL+6;'e=bMKFFu
+RGD^9eQ1B--daFqjBrM%YY!(W:rS'TMScSq;N<;97ZFKS"HXRbfZiuaMP5Z+FIr#9$3a0Zl_lbQ
+<@2Ka%4'c[b")Oc"#*-D$83Tg.+nX</!MsE:SM07C95P."3K"DU-/Q/">EBKM"#4QE.H#%N=DI+
+;''s#F(&jk8?m@TruoaU8*6X]6h>T18"H,QlXk8:J80RA+qk^7`NKNJ^jNfiVe*pSq)n[1`((2:
+5JsZ2e.V3!V%n4]Apq7+91!+2:p*&=Oae&$,+jj%\](I`@<&uT+V0EPh3@Zs5'No$cBEr%@l:ZI
+>?tiqeWB,Tl])<aOo[\>eK-Q/S7N%<"Ir7,^m6`u%D5<-24uV175k9>2!==@2L6=U]&W[3&&i'#
+NY1%OL@W6mam)\+&&#T/gNfLmjIObl?kP7?[qn8Idbi1@>`_lJ5Wp0M4+2R)6*V#3+fFZc`8JN"
+)YGIIOs?-b!J!`9Hd@rbf.IM[%tB<uL`_;AhfT#WqXG1hiat+3%68[3Y:b?0l2<8]\6UtXi@!7J
+;blj)*$/Dk0`gg7q"5^M%8RMc]FW+oRd+e,bM6l5odJlVjl?&KH%PUb(35XQL>'k2DAQA%d$>KL
+^pEQ/m.9>mV\d[gSN7q0#6?rOV[TB]3it[$=qGF![(m9:HDUl#n98-)<M\1\k/^IY+t/%@X3?j[
+Oa@Od8_<+[S]=gC;KpSI8"P[ekV0##:+-"d(CN7Ve5N`B.q(qU+uThD"\C.)'#mr:bskW'%BLoh
+7/l+KkYU"mONg=ac.9oO.CCY56;i&m%auM2ZJAM\m<l:.NEEDV=hf]-AJ_,N=>OhQVb@Tg)!i`^
+K:JX1hk<qcUSA?a;ZjfS4e]^(fu:H[`ACMO\@&4!1)hKCX7Kg(fE>T8?GBQ/K2V.<]1`P:S0UrA
+kT2n9?<(jleaVm(2$Q,f>9*>(Sm5>h>^CR$Uu:^W=<<clUcp3)Oil-1Bj?n;9ASZMp'TMuF!50B
+q?gNk(83Zh>'<J/J\JLu#kAC#=0AYN3VA].S;N9ERmP!$+6l&`3(e-E[80hq"\$(k1eDqLaPJ3*
+kI)-_X!c#:*+3EKXVKr>]UYX0=Bj3IA$b%MDD,a,I/f+_2pZ%-*9\2HiX8>KZ5'h>L:Z.f-Tb8X
+2Y4UZQYqEGlLqJ-,MkrJq.!s/_RQ*Tb7Me(QC850I=\(WY7lZ17cbGKSB"gH6#U!2Mp"^d,p_Zn
+3W'bAI:qoCe&PZ>HMHcoge<DS#P&Lmm8jI)&9&]j_Y3Wc`=NjY@D/\lkLL@$8UIG7ZHdEKltC7\
+8HF-tf)e^.!aI1_l!OXN2#p7-.[=&',LVAkR?5u],2gtGLNo3oS1:[A_IsQ`Jk`/[^E+5nCN&Bs
+Nj:PC:/FC$)-;=4fifHQ7Of4^ai0peU/Op@?G0>L'i8VcdRr-L9],Lk>B(9BB]m4/)Y:J,FPmu^
+(au\(?&-[FZb.b@!(Zk!K5-=G-!"^@_+'oj[t<JE>7$`k/@q]tZku%![>?K8.Td!/G$>pAl?_>0
+Z*lQq_GCD]Alr2A2ae>*5CFJ?9U.6a"n8B!l6\kN;SF_H(VW9*I'\nj7d^5=X&*Mh8k<R[CJP5_
+&HF2;*Qj\<r`J>L8?UYb)3jNO27GERROUo[9?i'Ol;A!HPO71#6`8\f&+fMtm(Z=n(b<gmWD[+R
+aU&J=&TdcdE9"lJ50&,JZ6=F:EA&>^hf3rKYGQYEA1YgPA>pgX\WBLNoSs8.!5(/DO62uU4nS-9
+hK(AIfBXj=_%o=>S`g3*%>F\.LV0/ESTWb"49o2n"J$i>"&qRG-7;`&1hcI016p$a16U5smBG/Z
+mOY,kF\GpI3anSjlf_9[e/,I]7WH(9T3BH;U:2..U8bM$R2pI;i$"Qh,PJ/lPT-9H#P7RVW?n-,
+BF:>XQ#U:@ao9:JX/7gsNTG.PC#MoH0>3I4&$!c%TG`n[eHKrER5uI:SGENe^-K$O>A4!`:RCM\
+:5Y;+_e'F>pJ3n2ZPe+"B%5[s7m:d-I7a%p;q,@s*YKA4Gd3Ff?!!+p<,*i4$f8iC(n`?GD35ji
+n6gmd4BbMC'!D@R7J0iB!jQaEYGoklG":%.5p[$kZ\&s$<CW!R"V%]/>ZW@5.k28*IEH)'WSNse
+f2#[;90X(4Iqkgn]>iQ6id#K^RppLo>448H2c0Q6C.D0&#UBNG5!n2Zo=)Hu[qcYZJuTfKU`loR
+o%KP&bnkP^YE'*Y-,g69@O/SD-5+)mclY!_L?cAHq<]d+eQa<3s*Gf/:=")=&E<oDn:E\!!HjSf
+'*7"qNI$eNT%6&"YcUf'992/lVS68Xqjf4bM5('rQmp)O<&k=Vb1YYjm2EKoS9YpdV(29F"+<r)
+"<U\nRc,nF[2bisR;l9pbFY;UFjqBiU\tL^9ek&A3\FT"_5[T_V'W>_P"C@LCK"Te";mt+f'QK,
+nq!X=$<eQ4:p#WlhuFndQI[%N#oiYL(4Hq3G5$DAlb[YnGctL.5`FAmYLi!FH*U+L3[?Y;5!niQ
+lh$`pk>!*.'6n8:"/U2dd*J@cU(,nV:L_fI_@RR=OZo1W>i/J#R7*CpL"CDeRGHm%kf+i$!ZoT"
+VAtS^#/Z?Fk20L#^pCY>&2D&B&(!pdc%Fl(bO@9'OkAP=rtkp_]2>)fnLL0b'b=(%dtDtnflas4
+<gV[YYKO07l64jIChW6tBfiOP9H'HFaG;9=.fG1YR.`,GcA()\RdD.2@s<H_->a4)9;:an)na,H
+,^Rdj(:Kse_+HZ(I1t`"Dg+":<6COhpb@jrV+G:EZ1pqnd`MthqJY12&C`?110#ICb>T7:WTe.8
+PegUoAlogn7%+Grafl")cgEu1)k#V+n#Gi2a5N;Y,?mm0>NHf)SllNgTW=uoh,7Nn/i>q-M7p8'
+%_s5X=*p"_d0J"5%V)iFS&G/k7GJs_,K"4drn*u@$N;:OZec)X372QNO.6e]U7\r^gjLQ^g(`O-
+IRCCm)CCQ$dZ^F:`*I`8s$QZ8rf$C?'\Z@7C^k^9*BDeU57#@eX[tSW3"j#43d%[c&+OkrC9YJm
+,`2Z<a*m[?_76QKd<mbWN2@:`B&TG2T%)6M'kJ_\?cc/<@B<i`N?6]+K&Aul]Z:,*X)p8r]_D&5
+kbN\#kbT(KOP6IrmS>K[EePj.28'gHUFP0ep.egfHZts#"HLAsofu!%E-Ob).N3OPCsJCfgb#mJ
+@3@S:KC0GEAr?oaSM]=VeTQ2,6kS?D3@_h2=_JhF'0['u4lNtf/44*e`Rn0&\T(2]IWS&b@0KA.
+W/JrNY+s<sk.U80nDXOrb5I@/Hh?Oe:mR7K^TH9t<Xj=+0*R%B_!O2M:(KO1%^;k:d-C.U!/CnO
+\Qiil[RAQ.mI"Y*l>UApV[Hg7BDc7sl'u@+X4T:@[PGFX\udGcNFi08=JZK_d\aA]&6,@._Xf&G
+'GQfS;$_;+(%aV1d\/7\?p'iD6(SV98Lnkoal61[D:SGZ!aOilTfc:HgW4JeY]=:a*$eB'JE7QI
+g"b:D>2KS,'2?U@4c3t$Vq$NH,0tF_O>:B1]L&>bcoKh/E"\=t%FP[eS4"n+_ST\D]h.2`)<Kju
+FTWWETm2+M,^fT2E-OkA@=I'D9)E$6"!srV60)<Te;)4];6T'.m>&Q]1'UT)F-(ja#XY@hBm"%9
+\eo+s^UW:I$rM=dAk,p,CI_GqS(LXYQ"ugaY7=9Fi9k4;]`6[,qT;0&WjZW62Fbl2A:MlmApQ0G
+`[MOaK+A8CJG9k8)*Rb[nO!C5B<s5-ZZ*:c^[L1Xj0ZHgo10Q3JGt3<nr#<6;e%XM$*c2(Dr&!l
+J"m.24GK5!"FhQn>jX,sF35.C3^GjC])u.b@&pB.W$lR<f2l&tfiY@M'6na][4j\W5Zsa0Nq8LG
+_Z;Z\j]g[mP5<kL$1K"dI#!9%I);[)BF.aGR2DYNp_<:<+WG8bJ`$JaGRm!rrThAuDhT7S3L7`^
+92VQ8!ZR-56iZB=^&c?TacQ1bU]&fJ(#YWBR&-JlH*"%BW?4A!6+7pCD_L2,5c`7Uge4l^Uo!!A
+c<pq58ZiU"b>tUdglf_p2^lnA\YW9e-BI<E]`53QG[)pdgia99LM-5!e%9-bEa+Kd<e*-K>6d>r
+oZc5#X!;'fBh<]W<1/ki^es/Sr:O1<<CgF8M[<!R-=pcr`+"RD=4SJ)!\OG((=t``m(pa:(NOu!
+6n"])2AI4L`n+jT=aO"!rWmIl\W8q#_8a+%i*nhgl-XRu/#@!2RXE1Adl3\.&+ta:_V'(9U>09C
+rk36$=dc<Hk0d6BZ7uIIkg<<996eI6@S?HW?9QM&+S"5Np^XiDs-CnbKt0e!:M\7adaBLKV9'F3
+BAK,ih1#'Vi8e##,eOA#b>1TtM)c0rN9<$DU7Smd>;'GMA5\nr@P2,A'R-Wg]p67!&d3gYP(M2B
+'WLF9N.jdfP(sZ3,YcEca%4tj<gAAuBDkRTna#Pf'1]E.`T6p0Ig(%4?+0`m*k-2-Sq=Y0r>Jc"
+YgeBih'>iHR*pu5eUKjD4oX4G(M'Z;,Wsu=H_Znn_`r3l$>u*FI;ht[iasM$/TXct/emS[GKtIr
+\'s?uoshhR*^T]W@t/'.~>
+endstream
+endobj
+11 0 obj
+<</Type/FontDescriptor/FontName/SQFGIZ+Helvetica-Bold/FontBBox[0 -14 515 724]/Flags 65568
+/Ascent 724
+/CapHeight 724
+/Descent -14
+/ItalicAngle 0
+/StemV 77
+/MissingWidth 500
+/CharSet(/one/slash/two)/FontFile3 126 0 R>>
+endobj
+126 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 518>>stream
+Gar8S?t!MPA7Xcq8BiSV/]g[]e9/p[8HB-3rK(Xh+iEq>QFXX$a7PuAXKi6uF'e?Zo.YC[YUo[F
+/G-VEn9ZbepBgp*Ak'dtY3F7-"dMNEkntcS)PKIURbHIV#SBEs91su78skQh958HYHCf^,OAV=4
+P@'E@RTEt#i!`SUPEVE9OIfBROAW*@R$*W$!n%jMR$3u@i0Kdp=\t2eVP)nLWF07E@&OGY9`6_f
+P=g`JJeRa5'mp]\Y"'(4?smBn2`+uO&7?&Y&8#<YA7Uh2SaiJ-n,'-=q2F30I`@6D:AUHtHB.B>
+da&n6^)mTkJ\k.='pu`prMUJ0;u9kZB;?SqWOYsEDn^*!4a)pEmt*bR^U#Y4qC__0(9$fEPja3u
+^CRQnh7.G'kNh%$T<:E2rL2cYXR>-+R_RBI9n$lcFuT.PaF0CY`-,q6cI4."-Fh\Djnq%3bq/UY
+a"ko;jgR4iO"rW-P!qSnbl;QB5C*prG:p&eMVR+"VXX)&=.IFNbJ4)X(j_q]~>
+endstream
+endobj
+128 0 obj
+<</Type/Metadata
+/Subtype/XML/Length 1344>>stream
+<?xpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<?adobe-xap-filters esc="CRLF"?>
+<x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='XMP toolkit 2.9.1-13, framework 1.6'>
+<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:iX='http://ns.adobe.com/iX/1.0/'>
+<rdf:Description rdf:about='uuid:37b5db14-4bca-11f4-0000-6aa0963f4258' xmlns:pdf='http://ns.adobe.com/pdf/1.3/' pdf:Producer='GPL Ghostscript 9.07'/>
+<rdf:Description rdf:about='uuid:37b5db14-4bca-11f4-0000-6aa0963f4258' xmlns:xmp='http://ns.adobe.com/xap/1.0/'><xmp:ModifyDate>2019-01-08T17:27:03-08:00</xmp:ModifyDate>
+<xmp:CreateDate>2019-01-08T17:27:03-08:00</xmp:CreateDate>
+<xmp:CreatorTool>UnknownApplication</xmp:CreatorTool></rdf:Description>
+<rdf:Description rdf:about='uuid:37b5db14-4bca-11f4-0000-6aa0963f4258' xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/' xapMM:DocumentID='uuid:37b5db14-4bca-11f4-0000-6aa0963f4258'/>
+<rdf:Description rdf:about='uuid:37b5db14-4bca-11f4-0000-6aa0963f4258' xmlns:dc='http://purl.org/dc/elements/1.1/' dc:format='application/pdf'><dc:title><rdf:Alt><rdf:li xml:lang='x-default'>Untitled</rdf:li></rdf:Alt></dc:title></rdf:Description>
+</rdf:RDF>
+</x:xmpmeta>
+                                                                        
+                                                                        
+<?xpacket end='w'?>
+endstream
+endobj
+2 0 obj
+<</Producer(GPL Ghostscript 9.07)
+/CreationDate(D:20190108172703-08'00')
+/ModDate(D:20190108172703-08'00')>>endobj
+xref
+0 129
+0000000000 65535 f 
+0000054523 00000 n 
+0000078207 00000 n 
+0000054312 00000 n 
+0000050930 00000 n 
+0000000009 00000 n 
+0000002226 00000 n 
+0000054589 00000 n 
+0000057316 00000 n 
+0000068693 00000 n 
+0000057912 00000 n 
+0000075931 00000 n 
+0000057509 00000 n 
+0000070221 00000 n 
+0000056686 00000 n 
+0000058085 00000 n 
+0000054630 00000 n 
+0000054660 00000 n 
+0000051081 00000 n 
+0000002246 00000 n 
+0000005521 00000 n 
+0000054723 00000 n 
+0000054753 00000 n 
+0000051234 00000 n 
+0000005542 00000 n 
+0000006696 00000 n 
+0000054816 00000 n 
+0000054846 00000 n 
+0000051387 00000 n 
+0000006717 00000 n 
+0000007873 00000 n 
+0000054909 00000 n 
+0000054939 00000 n 
+0000051540 00000 n 
+0000007894 00000 n 
+0000009763 00000 n 
+0000055002 00000 n 
+0000055032 00000 n 
+0000051693 00000 n 
+0000009784 00000 n 
+0000011747 00000 n 
+0000055095 00000 n 
+0000055125 00000 n 
+0000051846 00000 n 
+0000011768 00000 n 
+0000015573 00000 n 
+0000055188 00000 n 
+0000055218 00000 n 
+0000051999 00000 n 
+0000015594 00000 n 
+0000016905 00000 n 
+0000055281 00000 n 
+0000055311 00000 n 
+0000052152 00000 n 
+0000016926 00000 n 
+0000018549 00000 n 
+0000055374 00000 n 
+0000055404 00000 n 
+0000052305 00000 n 
+0000018570 00000 n 
+0000020095 00000 n 
+0000055467 00000 n 
+0000055497 00000 n 
+0000052458 00000 n 
+0000020116 00000 n 
+0000022102 00000 n 
+0000055560 00000 n 
+0000055590 00000 n 
+0000052611 00000 n 
+0000022123 00000 n 
+0000023395 00000 n 
+0000055653 00000 n 
+0000055683 00000 n 
+0000052764 00000 n 
+0000023416 00000 n 
+0000025854 00000 n 
+0000055746 00000 n 
+0000055776 00000 n 
+0000052917 00000 n 
+0000025875 00000 n 
+0000029219 00000 n 
+0000055839 00000 n 
+0000055869 00000 n 
+0000053070 00000 n 
+0000029240 00000 n 
+0000032059 00000 n 
+0000055932 00000 n 
+0000055962 00000 n 
+0000053223 00000 n 
+0000032080 00000 n 
+0000035020 00000 n 
+0000056025 00000 n 
+0000056055 00000 n 
+0000053376 00000 n 
+0000035041 00000 n 
+0000038328 00000 n 
+0000056118 00000 n 
+0000056148 00000 n 
+0000053529 00000 n 
+0000038349 00000 n 
+0000039366 00000 n 
+0000056211 00000 n 
+0000056242 00000 n 
+0000053684 00000 n 
+0000039387 00000 n 
+0000041790 00000 n 
+0000056306 00000 n 
+0000056337 00000 n 
+0000053841 00000 n 
+0000041812 00000 n 
+0000045171 00000 n 
+0000056401 00000 n 
+0000056432 00000 n 
+0000053998 00000 n 
+0000045193 00000 n 
+0000047724 00000 n 
+0000056496 00000 n 
+0000056527 00000 n 
+0000054155 00000 n 
+0000047746 00000 n 
+0000050908 00000 n 
+0000056591 00000 n 
+0000056622 00000 n 
+0000058727 00000 n 
+0000068952 00000 n 
+0000070562 00000 n 
+0000076165 00000 n 
+0000057200 00000 n 
+0000076785 00000 n 
+trailer
+<< /Size 129 /Root 1 0 R /Info 2 0 R
+/ID [<FCFDA37C3B815D07C108938534F43501><FCFDA37C3B815D07C108938534F43501>]
+>>
+startxref
+78330
+%%EOF

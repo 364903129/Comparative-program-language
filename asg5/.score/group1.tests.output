@@ -1,0 +1,36 @@
+GNU Prolog 1.4.4 (64 bits)
+Compiled Nov  6 2014, 18:04:28 with gcc
+By Daniel Diaz
+Copyright (C) 1999-2013 Daniel Diaz
+| ?- $Id: group1.tests,v 1.3 2019-02-07 14:31:59-08 - - $
+
+yes
+| ?- compiling /afs/cats.ucsc.edu/users/i/hwang108/private/cmps112/asg5/.score/database.pl for byte code...
+/afs/cats.ucsc.edu/users/i/hwang108/private/cmps112/asg5/.score/database.pl compiled, 76 lines read - 11199 bytes written, 8 ms
+
+(2 ms) yes
+| ?- compiling /afs/cats.ucsc.edu/users/i/hwang108/private/cmps112/asg5/.score/functions.pl for byte code...
+/afs/cats.ucsc.edu/users/i/hwang108/private/cmps112/asg5/.score/functions.pl compiled, 149 lines read - 16421 bytes written, 9 ms
+
+(2 ms) yes
+| ?- 
+     depart  LAX  Los Angeles     12:00
+     arrive  ATL  Atlanta         15:53
+     depart  ATL  Atlanta         18:30
+     arrive  MIA  Miami           19:41
+
+yes
+| ?- Error: no flight from: SEA to BOS.
+
+no
+| ?- 
+     depart  BOS  Boston-Logan    07:30
+     arrive  NYC  New York City   07:52
+     depart  NYC  New York City   11:00
+     arrive  CHI  Chicago         12:27
+
+yes
+| ?- Error: no flight from: SJC to DFW.
+
+no
+| ?- 

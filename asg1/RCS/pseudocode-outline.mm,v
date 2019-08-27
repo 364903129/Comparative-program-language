@@ -1,0 +1,200 @@
+head	1.4;
+access;
+symbols;
+locks;
+comment	@.\" @;
+
+
+1.4
+date	2019.01.05.00.51.53;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2019.01.05.00.47.42;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2018.12.19.00.27.36;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2018.12.19.00.26.17;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@-
+@
+text
+@.so Tmac.mm-etc
+.if t .Newcentury-fonts
+.INITR* \n[.F]
+.SIZE 12 14
+.TITLE "Pseudocode Outline"
+.RCS "$Id: pseudocode-outline.mm,v 1.3 2019-01-04 16:47:42-08 - - $"
+.PWD
+.URL
+.H 1 "Pseudocode Outline"
+The data structure consists of a recursively nested list\(::
+.ALX a ()
+.LI
+The top level list consists of a sequence of lines.
+Each line is pointed at by the
+.V= car
+of a cell in the top level list.
+.LI
+Each line consists of a line number,
+an optional label, which is always a
+.V= symbol? ,
+and an optional statement, which is always a
+.V= pair? .
+Use
+.V= null?
+to determine whether not something exists.
+Do not use
+.V= list? .
+.LI
+A statement consists of a keyword followed by operands,
+mostly expressions.
+.LI
+An expression uses prefix notation in standard Scheme format.
+.LE
+.P
+A suggested outline and description of some of the functions follows\(::
+.ALX a ()
+.LI
+After reading in the program,
+make one pass over the top level,
+checking for a label in each line.
+Each label should be inserted into the label hash
+with a pointer to the top level node (not the line).
+.LI
+Write a function
+.V= interpret-program
+takes the top level list as an argument and
+checks to see if there is a statement.
+.ALX a ()
+.LI
+If there is no statement,
+call
+.V= interpret-program
+recursively with the
+.V= cdr
+of the top level node.
+.LI
+If there is a statement, look up the keyword in the
+statement hash and call
+.VI interpret- statement ,
+where
+.IR statement
+is the keyword found in the statement.
+.LI
+This funcion should return null
+for a statement that is not a control transfer,
+or for a statement that is a control transfer that is not taken.
+.LI
+If this function returns a null then call
+.V= interpret-program
+recursively with the
+.V= cdr ,
+as explained above.
+.LI
+If this function is a successful control transfer,
+it should return the label to which to transfer,
+and then
+.V= interpret-program
+calls itself recursively with the associated line.
+.LE
+.LI
+Write separate functions
+.VI interpret- statement
+for each one of the keyword in the language.
+.LI
+The function
+.V= evaluate-expression 
+is called by a statement interpreter.
+.ALX a ()
+.LI
+It looks up the function in the function table.
+.LI
+It uses
+.V= map 
+to call
+.V= evaluate-expression
+for each of the arguments to the function.
+.LI
+Then use
+.V= apply
+to apply the function to the list of results obtained.
+.LI
+Subscripting arrays will require a special case.
+.LE
+.LE
+.FINISH
+@
+
+
+1.3
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: pseudocode-outline.mm,v 1.2 2018-12-18 16:27:36-08 - - $"
+d9 1
+a9 3
+.de BULLETS
+.   ALX \[bu] 0 "" 0 0
+..
+d11 1
+a11 1
+.BULLETS
+d48 1
+a48 1
+.BULLETS
+d88 1
+a88 1
+.BULLETS
+@
+
+
+1.2
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: pseudocode-outline.mm,v 1.1 2018-12-18 16:26:17-08 - - $"
+a105 6
+.LI
+Implementation may use one or two symbol tables\(::
+Functions and identifiers may be placed into the same table,
+or they may be separated into two tables.
+There is an ambiguity in the notation for calling a function
+and subscripting an array.
+@
+
+
+1.1
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: pseudo-code.mm,v 1.1 2018-10-10 15:09:53-07 - - $"
+d53 3
+a55 1
+call it recursively with the
+@

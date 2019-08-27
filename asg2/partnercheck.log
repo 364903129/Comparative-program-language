@@ -1,0 +1,8 @@
+partnercheck: ./PARTNER: format OK:
+username = "mzhang62"
+passwd   = "*"
+uid      = "217310"
+gid      = "100"
+gecos    = "Michael Zhang"
+home     = "/afs/cats.ucsc.edu/users/m/mzhang62"
+shell    = "/bin/bash"

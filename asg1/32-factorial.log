@@ -1,0 +1,10 @@
+ Factorial of:
+ factorial(  1.0  ) =   1.0
+ Factorial of:
+ factorial(  42.0  ) =   1.4050061177528798e+51
+ Factorial of:
+ factorial(  69.0  ) =   1.711224524281413e+98
+ Factorial of:
+ factorial(  107.0  ) =   1.2265202031961373e+172
+ Factorial of:
+ Program stopping.

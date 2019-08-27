@@ -1,0 +1,3 @@
+checksource: missing newline at end of line
+   file "functions.pl": 1 errors: line 150
+checksource: TOTAL COMPLAINTS: 1

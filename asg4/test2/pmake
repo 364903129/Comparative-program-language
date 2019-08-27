@@ -1,0 +1,405 @@
+#!/usr/local/bin/perl
+#Haofan Wang hwang108@ucsc.edu
+#Michael Zhang mzhang62@ucsc.edu
+
+use strict;
+use warnings;
+use Data::Dumper;
+use Getopt::Std;
+use POSIX qw(strftime);
+$0 =~ s|.*/||;
+
+my %opts;
+getopts "dnf", \%opts;
+
+my $makeFile = "Makefile";
+
+my $exitCode = 0;
+my $currLine1;
+my $executeCom;
+my %depts;
+my @inputs = ();
+
+my %htMacro;
+my %htdepts;
+my %htCom;
+my %htLines;
+
+my @MacroList = ();
+my $currentTarget;
+my $argumentCheck = 0;
+my @command =();
+my $runTarget;
+my $file_name;
+my $targ;
+my $counter;
+my $lineNumber = 0;
+my $lineNum;
+
+if ($ARGV[0]) { 
+   $runTarget = $ARGV[0]; 
+   $argumentCheck = 1;
+}
+
+if ($ARGV[1]) { 
+   $runTarget = $ARGV[1]; 
+   $argumentCheck = 1;
+}
+
+#--------------open the file and put info into the hash table-----------------
+open my $file, "<$makeFile" or warn "$makeFile: $!\n" and next;
+#print "open the file";
+while (<$file>) {
+   $lineNumber++;
+   # print "current line is $lineNumber\n";
+   my $line = $_;
+   # print " this is $line";
+   my $comment = substr($line, 0, 1);
+   #if this is not a commend
+   if ($comment ne "#") {
+      if ($line !~ /\t/  && $line =~ /=/) {
+         # print "the line is $line";
+         push(@MacroList, $line);
+         $htLines{$line} = $lineNumber;
+      } elsif ($line =~ /:/ && $line !~ /\t/) {
+         substr ($line, index($line, ":", 0), 0) = ' ';
+         my @words = split m/\s+/, $line;
+         $currentTarget = $words[0];
+         if ($argumentCheck == 0) {
+            $argumentCheck = 1;
+            $runTarget = $currentTarget;
+         }
+         # print "the word is @words \n";
+         my %params = map {$_ => 1} @inputs;
+         # print "2the line is $line";
+         push @inputs, $line;
+         $htLines{$line} = $lineNumber;
+      } elsif ($line =~ /\t/) {
+         $line =~ s/^\t+//;
+         # print "3the line is $line";
+         # print "the currentTarget is $currentTarget \n";
+         my $commandLine = "$currentTarget" . '#' . "$lineNumber ". "$line";
+
+         # print "the commandLine is $commandLine\n";
+         # print "the command is @command\n";
+         push (@command, $commandLine);
+         $htLines{$line} = $lineNumber;
+         # my $test2 = $htLines{$line};
+         # print "test2 = $test2\n";
+      }
+
+   }
+}
+#print "the run Target is $runTarget";
+#print Dumper(@MacroList);
+close $file;
+
+#--------------------------check the version of the file----------------------
+sub mtime ($) {
+   my ($filename) = @_;
+   my @stat = stat $filename;
+   return @stat ? $stat[9] : undef;
+}
+
+sub fileinfo ($) {
+   my ($filename) = @_;
+   my $mtime = mtime $filename;
+   print "$filename: ";
+   if (defined $mtime) {print strftime "%c\n", localtime $mtime}
+                  else {print "$!\n"}
+   return $mtime;
+}
+
+for my $filename (@ARGV) {
+   unless (-e $filename) {
+      # printf STDERR "$0: $filename: $!\n";
+   }else {
+      my $mtime = mtime $filename;
+      my $ctime = strftime "%c", localtime $mtime;
+      # printf "%-20s %12d %s\n", $filename, $mtime, $ctime;
+   }
+}
+
+
+#-----------------------------parse dependencies------------------------------
+
+
+for my $macro (@MacroList) {
+  # print "the macro is $macro\n";
+   my ($mac, $val) = parse_dep $macro;
+   $htMacro{$mac} = $val;
+}
+#print " the macro hash table is Dumper(\%htMacro)";
+
+sub parseDependencies($) {
+   my($line) = @_;
+   #print "the line is $line";
+   my @return = ();
+   return undef unless $line =~ m/^(\S+)\s*:\s*(.*?)\s*$/;
+   my ($target, $dependency) = ($1, ($2));
+   my @dependencies = split m/\s+/, $dependency;
+   #print "the dependencies array is Dumper(@dependencies);"
+   #print " \$";
+   if (substr ($target,0, 1) eq "\$") {
+      my $temp = substr($target, 2, (length($target) - 3));
+      my @targetsA = $htMacro{$temp};
+      $target = "" . "@{$targetsA[0]}";
+   }
+   foreach (@dependencies) {
+      my $firstChar = substr($_, 0 ,1);
+      #print $_;
+      if ($firstChar eq "\$") {
+         my $hashRef = substr($_, 2, (length($_) -3));
+         #print "the reference is $hashRef\n";
+         my @newdepts = $htMacro{$hashRef};
+         #print "Dumper at newdepts is:". Dumper(@newdepts);
+         #print "target is $target \n";
+         for (my $i = 0; $i < @newdepts; $i++) {
+            my @inside = $newdepts[$i];
+            for (my $j = 0; $j <@inside; $j++) {
+               push(@return, @{$inside[$j]});
+            }
+         }
+      } else {
+         if (exists $htdepts{$target}) {
+            my @inHash = $htdepts{$target};
+            for (my $i = 0; $i < @inHash; $i++) {
+               my @inHashWords = $inHash[$i];
+               foreach (my $j = 0; $j < @inHashWords; $j++ ) {
+                  push(@return, @{$inHashWords[$j]});
+               }
+            }
+         }
+         push (@return, $_);
+      }
+
+   }
+   #print "the target is $target";
+   return $target, \@return;
+   
+}
+
+sub parse_dep ($) {
+   my ($line) = @_;
+  # print "the line is $line";
+   return undef unless $line =~ m/^(\S+)\s*=\s*(.*?)\s*$/;
+   my ($target ,$dependency) = ($1, ($2));
+   my @dependencies = split m/\s+/, $dependency;
+   my @val = split m/\s+/, $dependency;
+   my @returnVal = ();
+   foreach(@val) {push (@returnVal, $_); }
+   return $target, \@val;
+}
+
+
+for my $input (@inputs) {
+#   print "input is $input";
+   my ($target, $depen) = parseDependencies $input;
+   print"$0: syntax error: $input\n" and next unless defined $target;
+  
+   $htdepts{$target} = $depen;
+   
+
+}
+#print "the command is @command";
+#print Dumper(\%htdepts);
+   for my $commands (@command) {
+      my @pushcommand = ();
+      my $realCommand = "";
+      #extract target name, command and linenumber from the commands
+      $targ = substr ($commands, 0 , index ($commands, '#'));
+      my $currLine0 = substr ($commands, index ($commands, '#') + 1,
+                                         index ($commands, ' '));
+      $currLine1 = substr ($currLine0, 0,index($currLine0, ' '));
+      my $cmds = substr ($commands, index ($commands, ' ') + 1);
+      # print"the target is $targ\n";
+      # print"the command is $cmds\n";
+      # print"the line number is $currLine1\n";
+
+   #print "targ is $targ and cmds is $cmds";
+      my @commandWord = split m/\s+/, $cmds;
+      foreach(@commandWord) {
+         $realCommand = "$realCommand" . "$_ ";
+      }
+      if (substr($targ, 0, 1) eq "\$") {
+         my $temp = substr ($targ, 2 ,(length($targ) -3));
+         my @array = $htMacro{$temp};
+         foreach(@array) {
+            $targ = "@{$_}";
+         }
+
+      }
+      $targ =~ s/^\s+|\s+$//;
+      if($targ) {
+         if (exists $htCom{$targ}) {
+            # print" we are here"
+            my @inhtCom = $htCom{$targ};
+            for (my $i = 0; $i <@inhtCom; $i++) {
+               my @inside = $inhtCom[$i];
+               for (my $j = 0; $j < @inside ; $j++) {
+                  push (@pushcommand, @{$inside[$j]});
+               }
+            }
+         }
+         chop $realCommand;
+         push @pushcommand, $realCommand;
+      }
+      $htCom{$targ} = \@pushcommand;
+   }
+
+sub replaceDollar($) {
+   my @words = split m/\s+/, $_;
+   my $returnCommands = "";
+   foreach (@words) {
+      if($_ =~/\$\$/) { $_ =~ s/\$//; }
+      $returnCommands = "$returnCommands" . "$_ ";
+   }
+   $_ = "$returnCommands";
+}
+
+sub replaceLess($) {
+   my @cmdWords = split m/\s+/, $_;
+   my $return = "";
+   foreach(@cmdWords) {
+      if ($_ =~/\$/) {
+         if ($_ =~ /</) {
+            $executeCom = ".c" if $executeCom eq ".o";
+            $executeCom = ".java" if $executeCom eq ".class";
+            $executeCom =~ s/[^\.]*//;
+            $return = "$return". "$file_name". "$executeCom";
+
+
+         }
+      } else {$return = "$return" . "$_ "; }
+   }
+   $_ = $return;
+} 
+
+sub replaceMacro ($) {
+   my @cmdWord = split m/\s+/, $_;
+   my $return = "";
+   foreach (@cmdWord) {
+      if ($_ =~ /\$/) {
+         my $tmp  = substr ($_, 2 ,(length ($_) - 3));
+         if (exists $htMacro{$tmp}) {
+             my @holder = $htMacro{$tmp};
+             foreach (@holder) {
+                $return = "$return". "@{$_} ";
+             }
+         }else {$return = "$return"."$_ "; } 
+      } else {$return = "$return" . "$_ "; }
+   }
+   $_ = $return;
+}
+
+
+
+sub runCommands ($);
+sub runCommands ($) {
+   my ($target) = @_;
+   # print "the target is $target";
+   my $destnation = $target;
+   my @dependents = ($htdepts{$target});
+   #print "the target is $target;""
+   my $commandRun = $htCom{$target};
+   foreach (@dependents) {
+      my @dep = @{ $_ } if $_;
+      #print "the dep is @dep\n";
+      foreach (@dep) {
+         
+         if (-e $_) {
+            #print "we are here";
+         } elsif ($htCom{$_}) {
+            $executeCom = join (" ",@{$htdepts{$_}});
+            $executeCom =~s/[^\.]*//;
+            runCommands($_);
+         } else {
+            $executeCom = $_;
+            if($_ =~ /%/) {}
+            else {
+               $file_name = $_;
+               $file_name =~ s/[\.].*//;
+            }
+            
+            $executeCom =~ s/[^\.]*//;
+            $executeCom = '%' . "$executeCom";
+            if ($htCom{$executeCom}) { 
+               runCommands($executeCom); }
+         }
+      }
+   }
+   if (defined $htCom{$target}) {
+      if (!@{$htCom{$target}}) {
+         # print "we are here";
+         $executeCom = $target; $file_name = $target;
+         $executeCom =~ s/[^\.]*//;
+         $file_name =~ s/[^\.].*//;
+         $target = "\%". $executeCom;
+         $commandRun = $htCom{$target};
+
+      
+      }
+   }
+
+   foreach ($commandRun) {
+      # print "the commandrun is". Dumper($commandRun);
+      $counter++;
+      my @list = @{$commandRun} if $commandRun;
+      foreach(@list) {
+         my $execute = ($_);
+         my $dash = substr($execute,0, 1);
+         $lineNum = $htLines{"$execute\n"}; #extract line number
+         # my $test = $htLines{"- rm hello.o main.o "};
+        #  print "the line hash is". Dumper(\%htLines);
+        # print "the line number is $lineNum\n";
+        # print "the execute is $execute\n";
+
+        # print "the dash is: $dash \n";
+          
+
+         while ($_ =~/\$</) {
+            $_ = replaceLess $execute;
+            # print "the command is $_"
+         }
+
+         while ($_ =~/\${/) {
+            $_ = replaceMacro $execute;
+            chop $_;
+            # print "the command is $_"
+         }
+
+         while ($_ =~ /\$\$/) {
+            $_ = replaceDollar $execute;
+            # print "the command is $_"
+         }
+
+         $_ =~ s/^\s+|\s+$//;
+#         print "we are here\n";
+         if ($execute = /@/) {
+            $_ = substr($_, index($_, '@') + 1);
+            system($_); 
+            $exitCode = ($? >> 8) & 0xFF;
+         }elsif ($dash =~ /-/){
+
+            $_ =~ s/^- *//;
+            print "$_\n";
+            # print "this is $_";
+            my $err = $?;
+            # print "the error is $err\n";
+            system($_) ==0 or print 
+               "make: [Makefile:$lineNum: $destnation] Error 1 (ignored)\n";
+           # $exitCode = ($? >> 8) & 0xFF;
+         }else{
+            print "$_\n";
+            system($_); 
+            $exitCode = ($? >> 8) & 0xFF;
+         }
+      }
+   }
+
+   if ($exitCode == 1) {
+      print "make: [Makefile:$lineNum: $destnation] Error 1 $exitCode\n";
+   }
+}
+
+runCommands($runTarget);

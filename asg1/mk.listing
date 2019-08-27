@@ -1,0 +1,5 @@
+#!/bin/sh
+# $Id: mk.listing,v 1.3 2019-01-04 17:05:10-08 - - $
+./mk.readme
+cid + $0 sbi.scm .score/*.sbir
+mkpspdf Listing.ps README.text sbi.scm .score/*.sbir

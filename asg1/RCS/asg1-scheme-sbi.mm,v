@@ -1,0 +1,2485 @@
+head	1.85;
+access;
+symbols;
+locks;
+comment	@.\" @;
+
+
+1.85
+date	2019.01.19.01.47.54;	author -;	state -;
+branches;
+next	1.84;
+
+1.84
+date	2019.01.18.00.47.53;	author -;	state -;
+branches;
+next	1.83;
+
+1.83
+date	2019.01.18.00.47.33;	author -;	state -;
+branches;
+next	1.82;
+
+1.82
+date	2019.01.17.20.15.09;	author -;	state -;
+branches;
+next	1.81;
+
+1.81
+date	2019.01.17.20.14.34;	author -;	state -;
+branches;
+next	1.80;
+
+1.80
+date	2019.01.15.22.39.29;	author -;	state -;
+branches;
+next	1.79;
+
+1.79
+date	2019.01.11.00.38.44;	author -;	state -;
+branches;
+next	1.78;
+
+1.78
+date	2019.01.09.01.46.51;	author -;	state -;
+branches;
+next	1.77;
+
+1.77
+date	2019.01.09.01.46.06;	author -;	state -;
+branches;
+next	1.76;
+
+1.76
+date	2019.01.09.01.45.20;	author -;	state -;
+branches;
+next	1.75;
+
+1.75
+date	2019.01.09.01.41.25;	author -;	state -;
+branches;
+next	1.74;
+
+1.74
+date	2019.01.09.01.33.45;	author -;	state -;
+branches;
+next	1.73;
+
+1.73
+date	2019.01.09.01.30.59;	author -;	state -;
+branches;
+next	1.72;
+
+1.72
+date	2019.01.09.01.30.34;	author -;	state -;
+branches;
+next	1.71;
+
+1.71
+date	2019.01.09.01.28.44;	author -;	state -;
+branches;
+next	1.70;
+
+1.70
+date	2019.01.08.23.33.30;	author -;	state -;
+branches;
+next	1.69;
+
+1.69
+date	2019.01.08.23.33.18;	author -;	state -;
+branches;
+next	1.68;
+
+1.68
+date	2019.01.08.23.32.38;	author -;	state -;
+branches;
+next	1.67;
+
+1.67
+date	2019.01.08.23.30.54;	author -;	state -;
+branches;
+next	1.66;
+
+1.66
+date	2019.01.08.23.30.12;	author -;	state -;
+branches;
+next	1.65;
+
+1.65
+date	2019.01.08.23.28.37;	author -;	state -;
+branches;
+next	1.64;
+
+1.64
+date	2019.01.08.23.27.17;	author -;	state -;
+branches;
+next	1.63;
+
+1.63
+date	2019.01.08.23.14.02;	author -;	state -;
+branches;
+next	1.62;
+
+1.62
+date	2019.01.08.23.13.17;	author -;	state -;
+branches;
+next	1.61;
+
+1.61
+date	2019.01.08.22.59.29;	author -;	state -;
+branches;
+next	1.60;
+
+1.60
+date	2019.01.08.22.56.50;	author -;	state -;
+branches;
+next	1.59;
+
+1.59
+date	2019.01.08.22.56.16;	author -;	state -;
+branches;
+next	1.58;
+
+1.58
+date	2019.01.08.22.55.05;	author -;	state -;
+branches;
+next	1.57;
+
+1.57
+date	2019.01.08.22.54.40;	author -;	state -;
+branches;
+next	1.56;
+
+1.56
+date	2019.01.05.01.00.46;	author -;	state -;
+branches;
+next	1.55;
+
+1.55
+date	2019.01.05.00.58.08;	author -;	state -;
+branches;
+next	1.54;
+
+1.54
+date	2019.01.05.00.56.07;	author -;	state -;
+branches;
+next	1.53;
+
+1.53
+date	2019.01.05.00.55.03;	author -;	state -;
+branches;
+next	1.52;
+
+1.52
+date	2019.01.05.00.54.47;	author -;	state -;
+branches;
+next	1.51;
+
+1.51
+date	2019.01.05.00.53.38;	author -;	state -;
+branches;
+next	1.50;
+
+1.50
+date	2019.01.05.00.52.41;	author -;	state -;
+branches;
+next	1.49;
+
+1.49
+date	2019.01.02.23.21.03;	author -;	state -;
+branches;
+next	1.48;
+
+1.48
+date	2019.01.02.23.17.25;	author -;	state -;
+branches;
+next	1.47;
+
+1.47
+date	2018.12.18.23.23.54;	author -;	state -;
+branches;
+next	1.46;
+
+1.46
+date	2018.12.18.23.22.56;	author -;	state -;
+branches;
+next	1.45;
+
+1.45
+date	2018.12.18.23.21.39;	author -;	state -;
+branches;
+next	1.44;
+
+1.44
+date	2018.12.18.23.21.17;	author -;	state -;
+branches;
+next	1.43;
+
+1.43
+date	2018.12.18.23.20.22;	author -;	state -;
+branches;
+next	1.42;
+
+1.42
+date	2018.12.18.23.19.45;	author -;	state -;
+branches;
+next	1.41;
+
+1.41
+date	2018.12.18.23.15.39;	author -;	state -;
+branches;
+next	1.40;
+
+1.40
+date	2018.12.18.23.14.40;	author -;	state -;
+branches;
+next	1.39;
+
+1.39
+date	2018.12.18.23.10.16;	author -;	state -;
+branches;
+next	1.38;
+
+1.38
+date	2018.10.12.21.17.13;	author -;	state -;
+branches;
+next	1.37;
+
+1.37
+date	2018.10.10.20.58.22;	author -;	state -;
+branches;
+next	1.36;
+
+1.36
+date	2018.10.10.01.14.09;	author -;	state -;
+branches;
+next	1.35;
+
+1.35
+date	2018.10.10.01.13.19;	author -;	state -;
+branches;
+next	1.34;
+
+1.34
+date	2018.10.10.01.08.51;	author -;	state -;
+branches;
+next	1.33;
+
+1.33
+date	2018.10.08.20.49.52;	author -;	state -;
+branches;
+next	1.32;
+
+1.32
+date	2018.09.27.21.30.57;	author -;	state -;
+branches;
+next	1.31;
+
+1.31
+date	2018.08.22.23.08.44;	author -;	state -;
+branches;
+next	1.30;
+
+1.30
+date	2018.04.04.21.15.43;	author -;	state -;
+branches;
+next	1.29;
+
+1.29
+date	2018.01.05.23.57.43;	author -;	state -;
+branches;
+next	1.28;
+
+1.28
+date	2017.12.14.20.46.47;	author -;	state -;
+branches;
+next	1.27;
+
+1.27
+date	2017.12.14.20.45.37;	author -;	state -;
+branches;
+next	1.26;
+
+1.26
+date	2017.12.14.20.44.18;	author -;	state -;
+branches;
+next	1.25;
+
+1.25
+date	2017.08.21.23.16.12;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2017.03.29.23.21.41;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2016.09.30.20.23.18;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2016.09.30.20.22.00;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2016.09.30.20.21.25;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2016.09.24.01.21.41;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2016.09.24.01.21.11;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2016.09.24.01.20.28;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2016.09.22.01.36.46;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2016.09.22.01.35.34;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2016.09.22.01.20.45;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2016.09.21.21.56.03;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2016.09.21.21.52.01;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2016.09.06.23.10.06;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2016.09.06.23.08.34;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2016.09.06.23.08.08;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2016.09.06.23.05.55;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2016.09.06.22.54.05;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2016.09.06.22.53.37;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2016.09.06.22.48.22;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2016.09.06.22.40.59;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2016.09.06.22.40.47;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2015.09.25.01.06.32;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2015.09.23.23.09.29;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2015.09.23.23.08.30;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.85
+log
+@-
+@
+text
+@.so Tmac.mm-etc
+.if t .Newcentury-fonts
+.INITR* \n[.F]
+.SIZE 12 14
+.TITLE CMPS-112 Winter\~2019 Program\~1 "Functionally Scheme"
+.tm title done
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.84 2019-01-17 16:47:53-08 - - $"
+.PWD
+.URL
+.de RULE
+.   IR \\$1 \|\|\[->]\|
+.   shift
+.   while \\n[.$] \{\
+.      ds Prefix \f[I]
+.      ds Suffix \f[R]
+.      if '\\$1'{' .ds Prefix \f[R]
+.      if '\\$1'}...' .ds Prefix \f[R]
+.      if '\\$1'[' .ds Prefix \f[R]
+.      if '\\$1']' .ds Prefix \f[R]
+.      if '\\$1'|' .ds Prefix \f[R]
+.      if '\\$1'@@' \{\
+.         ds Prefix `\f[CB]
+.         ds Suffix \f[R]'
+.         shift
+.      \}
+\|\\*[Prefix]\\$1\\*[Suffix]\&
+.      shift
+.   \}
+.   br
+..
+.EQ
+delim $$
+.EN
+.ds CMPS-112-root /afs/cats.ucsc.edu/courses/cmps112-wm
+.ds Scheme-root \*[CMPS-112-root]/usr/racket
+.H 1 "Overview"
+Scheme is a dynamically typed (mostly) functional language
+with a very simple syntax.
+In this assignment, you will write a Silly Basic language
+interpreter in Scheme.
+The interpreter will read in an intermediate language program,
+parse it, and then interpret it.
+No looping constructs may be used,
+so it is critical that certain parts use proper tail-recursion
+to avoid nuking the function call stack.
+.H 1 "A Silly Basic Interpreter"
+.SH=BVL
+.MANPAGE=LI "NAME"
+sbi.scm \[em] a Silly Basic Interpreter
+.MANPAGE=LI "SYNOPSIS"
+.V= sbi.scm
+.IR \|filename
+.MANPAGE=LI "DESCRIPTION"
+The SB interpreter reads in an SBIR program from the file whose
+name is specified in the argument list,
+stores it in a list,
+and then interprets that intermediate representation.
+During interpretation, numbers are read from the standard input
+and results written to the standard output.
+.P
+Error messages are printed to the standard error.
+The first error, whether during compilation or interpretation,
+causes a message to be printed and the program to exit with
+an exit code of 1.
+.MANPAGE=LI "OPTIONS"
+None.
+.MANPAGE=LI "OPERANDS"
+The single filename argument
+specifies an SBIR program to be run.
+.MANPAGE=LI "EXIT STATUS"
+If the program completes without error, 0 is returned.
+If not, 1 is returned.
+.MANPAGE=LI "HISTORY"
+BASIC (Beginner's All-purpose Symbolic Instruction Code)
+was designed at Dartmouth College, NH,
+by John Kemeny and Thomas Kurtz in 1965.
+A variation of that language was ROM BASIC,
+distributed by IBM on their original PC in 1980.
+.P
+(People used to spell the names of programming languages in all
+upper case because keypunches,
+such as the IBM 026 and 029,
+did not have lower case.
+Also, most printers usually had only upper case letters mounted,
+such as the IBM LN print train.
+A request to get upper and lower case, as with the IBM TN 
+print train, would cause the job to go into an overnight queue.)
+.P
+This version of basic is somewhat related,
+but no attempt is made to make it exactly the same.
+This description of the Silly Basic programming language,
+assumes that certain things are intuitively obvious.
+There are only two data types in the language\(::
+strings and real or complex numbers.
+Strings are used only in
+.V= print
+statements.
+There are no string variables.
+All variables are real numbers.
+.MANPAGE=LI "EWD498"
+And don't forget about what Dijkstra said about this language\(::
+.P
+Edsger W.\& Dijkstra\(::
+``It is practically impossible to teach good programming to students
+that have had a prior exposure to BASIC\(::
+as potential programmers they are mentally mutilated beyond hope of
+regeneration.''
+\[em]
+EWD498.
+.P
+The EWD manuscript archive is at
+.V= http://www.cs.utexas.edu/\[ti]EWD/ .
+.MANPAGE=LI "THE SBIR LANGUAGE"
+This is a top-down definition of the SBIR language,
+specified using a variation of Backus-Naur Form (BNF),
+the format used to specify Algol-60, yet another one of
+the ancient languages.
+In the metanotation, 
+brackets indicate that what they enclose is optional,
+braces indicate that what they enclose is repeated zero or more times,
+and a bar indicates alternation.
+Italics indicate nonterminal symbols and token classes,
+while quoted courier bold indicates literal tokens.
+.P
+.ALX a ()
+.LI
+.RULE Program @@ ( { @@ ( Linenr [ Label ] [ Statement ] @@ ) }... @@ )
+.P
+A program consists of zero or more statements,
+each of which
+might be identified by a label.
+Labels are kept in a name\%space separate from the
+.IR Variable
+namespace and do not conflict with each other.
+The program terminates when control flows off the last statement.
+A statement with neither a label nor a statement is considered
+just a comment and not put into the statement list.
+.LE
+.MANPAGE=LI "STATEMENTS"
+Statements are the only organizational structure in the language
+and are executed one by one in sequence, 
+except when a control transfer occurs.
+There is no block structure or nesting.
+.ALX a ()
+.LI
+.RULE Statement @@ ( @@ dim Arrayref @@ )
+.RULE Arrayref @@ ( @@ asub Variable Expression @@ )
+.P
+The
+.V= dim
+statement creates an array given by
+the variable name and inserts it into the array table,
+replacing any previous array already in the array table.
+The dimension of the array is given by the expression.
+All values in the array are initialized to 0.
+.P
+Unlike C,
+the lower bound of the array is 1 and the upper bound is the
+dimension, which may be an arbitrary expression.
+The expression is rounded to the nearest integer before being
+used as the bound, which must be positive.
+.LI
+.RULE Statement @@ ( @@ let Memory Expression @@ )
+.RULE Memory Arrayref | Variable
+.P
+A
+.V= let
+statement makes an assignment to a variable.
+The expression is first evaluated.
+For a
+.IR Variable ,
+its value is stored into the Symbol table,
+replacing whatever was there previously.
+For an
+.IR Arrayref ,
+the store message is sent to the vector representing the array.
+If the Symbol table entry is not an array,
+an error occurs.
+.LI
+.RULE Statement @@ ( @@ goto Label @@ )
+.P
+Control transfers to the statement referred to by the
+.IR Label .
+An error occurs if the
+.IR Label
+is not defined.
+.LI
+.RULE Statement @@ ( @@ if @@ ( Relop Expression Expression @@ ) Label @@ )
+.RULE Relop @@ = | @@ < | @@ > | @@ <> | @@ >= | @@ <=
+.P
+The two
+.IR Expression s
+are compared according to the given
+.IR Relop ,
+and if the comparison is true,
+control transfers to the statement, as for the
+.V= goto
+statement.
+Note\(::
+.V= <>
+is the symbol for not equal.
+The others should be obvious.
+.LI
+.RULE Statement @@ ( @@ print { Printable }... @@ )
+.RULE Printable String | Expression
+.P
+Each of the operands is printed in sequence, with a space
+before
+.IR Expression
+values.
+A newline is output at the end of the
+.V= print
+statement.
+.V= print
+statements are the only place
+.IR String s
+may
+occur in SBIR.
+.LI
+.RULE Statement @@ ( @@ input Memory { Memory }... @@ )
+.P
+Numeric values are read in and assigned to the input variables
+in sequence.
+Arguments might be elements of an array.
+For each value read into a
+.IR Memory ,
+the value is
+inserted into the Symbol table under that variable's key.
+For arrays, the array must already exist and the subscript not
+be out of bounds.
+.P
+If an invalid value (anything that is not a
+.V= number? )
+is read,
+the value returned is
+.V= nan .
+If end of file is encountered,
+the value returned is
+.V= nan
+and the variable
+.V= eof
+is entered into the symbol table with the value 1.
+The value of
+.V= nan
+can be computed using the expression
+.V= "(/ 0.0 0.0)" .
+The expression
+.V= "(= nan nan)"
+is false.
+.LE
+.MANPAGE=LI "EXPRESSIONS"
+Expressions consistitute the computational part of the language.
+All values dealt with at the expression level are real numbers.
+Invalid computations, such as division by zero and infinite results
+do not cause computation to stop.
+The value just propagates according to the rules of real
+or complex arithmetic.
+.ALX a ()
+.LI
+.RULE Expression @@ ( Binop Expression Expression @@ )
+.RULE Expression @@ ( Unop Expression @@ )
+.RULE Expression @@ ( Function Expression @@ )
+.RULE Expression Constant
+.RULE Expression Memory
+.RULE Binop Unop | @@ * | @@ / | @@ % | @@ \[ha]
+.RULE Unop @@ + | @@ \-
+.P
+.IR Constant s
+are numbers.
+Names of
+.IR Function s,
+.IR Arrayref s,
+and
+.IR Variable s
+all look like identifiers and their meaning is given by context.
+.ALX \[bu] 0 "" 0 0
+.LI
+.V= "(% x y)"
+is equivalent to
+.V= "(- x (* (trunc (/ x y)) y))" 
+.LI
+.V= "(\[ha] a b)"
+is exponentiation ($ a sup b $)
+.LE
+.LE
+.MANPAGE=LI "LEXICAL SYNTAX"
+.IR Comment s
+being with a semi-colon and end at the end of a line.
+.IR String s
+are delimited by double-quote marks
+.RB ( \[Dq] ).
+.IR Number s
+consist of digits, an optional decimal point, and an optional exponent.
+Keywords and
+.IR Variable
+names are atoms.
+All of this is taken care of by Scheme's builtin
+.V= read .
+.MANPAGE=LI "BUILTIN SYMBOLS"
+In addition to the operators that are part of the language,
+the following functions are part of the function table\(::
+.V= abs ,
+.V= acos ,
+.V= asin ,
+.V= atan ,
+.V= ceil ,
+.V= cos ,
+.V= exp ,
+.V= floor ,
+.V= log ,
+.V= log10 ,
+.V= log2 ,
+.V= round ,
+.V= sin ,
+.V= sqrt ,
+.V= tan ,
+.V= trunc .
+There is no facility for the user to add functions to the
+function table.
+.P
+The following are part of the initial variable table\(::
+.ALX \[bu] 0 "" 0 0
+.LI
+.V= nan " is " "(/ 0.0 0.0)"
+.LI
+.V= eof " is " 0.0
+.LI
+.V= pi " is " "(acos -1.0)"
+.LI
+.V= e " is " "(exp 1.0)"
+.LE
+.P
+Thus, if you like, you can follow the law in Indiana,
+according to
+.IR "House Bill No.\~246, Indiana State Legislature, 1897",
+which purportedly attempted to set the value of
+.if t \[*p]
+.if n pi
+to 3
+.=V [ http://en.wikipedia.org/wiki/Indiana_Pi_Bill ].
+.H 1 "Program Structure"
+The program will be read in by Scheme's
+.V= read
+function,
+and represented internally as a list of statements,
+each statement having its own structure.
+After reading in the program,
+all labels must be put into a hash table,
+the key being the label itself and the value being the
+particular statement it refers to.
+.P
+Interpretation will then proceed down the list from the
+first statement to the last.
+The interpreter stops when it runs off the end of the list.
+A control transfer is executed by fetching the address of
+a statement from the label table.
+.P
+All variables are either real numbers or vectors of real numbers.
+Another hash table is used whose keys are variable names
+and whose values are real numbers, vectors of real numbers,
+or single parameter functions.
+An array subscript operation and a function call are
+syntactically ambiguous,
+but are disambiguated at run time by checking the symbol table.
+An uninitialized variable should be treated as 0.
+.P
+Your program should not crash,
+no matter what the input.
+If a detectable unforseen condition happens due to user error,
+a message should be printed,
+giving the name of the file and the statement number.
+.P
+The usual arithmetic results for infinities are printed
+by the runtime system, and these should be generated wherever
+possible.
+Division by zero, for example, should produce one of these
+quantities
+.=V ( +inf.0 ,
+.V= -inf.0 ,
+.V= +nan.0 ).
+Make sure to add 0.0 to the denominator to ensure that you
+have a real number.
+Also look at the functions to see which ones need special treatment.
+While there is no way to input a complex number,
+Some computations, such as
+.V= sqrt(-1) ,
+may produce them, and thus will be written out in MzScheme's
+complex number notation.
+.P
+You may ignore the directory
+.V= src-sb ,
+which contains source code and a translator from Basic to SBIR.
+You may also ignore the directory
+.V= sbtran ,
+which contains the SB to SBIR translator itself,
+written in Ocaml.
+.H 1 "Functional Style"
+Programming should be done in entirely functional style,
+except for maintenance of the symbol tables.
+That means do not use any imperative functions except as outlined
+below.
+In Scheme, imperative functions end with a bang
+.=V ( ! )
+to indicate that an assignment is being made.
+Symbol tables are created with
+.V= make-hash
+and updated with
+.V= hash-set! .
+The symbol tables are as follows\(::
+.ALX a ()
+.LI
+.V= *function-table*
+is used to hold all of the functions, which include the operators.
+This is initialized when the program begins using a
+.V= for-each
+loop containing a
+.V= lambda .
+(See the example
+.V= symbols.scm ).
+.LI
+.V= *variable-table*
+holds the value of all variables,
+and is updated as needed during interpretation of the program.
+Whenever a variable in the symbol table is not found,
+the value 0 is returned.
+The variable table is initialized with the variables described in
+the section ``builtin symbols''.
+.LI
+.V= *array-table*
+is used to hold all arrays defined in the program.
+Arrays and variables are in separate namespaces.
+Arrays are created with
+.V= make-vector
+and updated with
+.V= vector-set! .
+.LI
+.V= *label-table*
+is used to hold addresses of each line, one level up from statements.
+This is initialized by scanning the list returned by
+.V= (read)
+when the program begins.
+.LE
+.P
+Except for
+.V= hash-set!
+and
+.V= vector-set!
+as outlined above,
+no imperative functions are permitted.
+Use functional style only.
+.H 1 "Pseudocode Outline"
+The data structure consists of a recursively nested list\(::
+.ALX a ()
+.LI
+The top level list consists of a sequence of lines.
+Each line is pointed at by the
+.V= car
+of a cell in the top level list.
+.LI
+Each line consists of a line number,
+an optional label, which is always a
+.V= symbol? ,
+and an optional statement, which is always a
+.V= pair? .
+Use
+.V= null?
+to determine whether not something exists.
+Do not use
+.V= list? .
+.LI
+A statement consists of a keyword followed by operands,
+mostly expressions.
+.LI
+An expression uses prefix notation in standard Scheme format.
+.LE
+.P
+A suggested outline and description of some of the functions follows\(::
+.ALX a ()
+.LI
+After reading in the program,
+make one pass over the top level,
+checking for a label in each line.
+Each label should be inserted into the label hash
+with a pointer to the top level node (not the line).
+.LI
+Write a function
+.V= interpret-program
+takes the top level list as an argument and
+checks to see if there is a statement.
+.ALX i ()
+.LI
+If there is no statement,
+call
+.V= interpret-program
+recursively with the
+.V= cdr
+of the top level node.
+.LI
+If there is a statement, look up the keyword in the
+statement hash and call
+.VI interpret- statement ,
+where
+.IR statement
+is the keyword found in the statement.
+.LI
+This funcion should return null
+for a statement that is not a control transfer,
+or for a statement that is a control transfer that is not taken.
+.LI
+If this function returns a null then call
+.V= interpret-program
+recursively with the
+.V= cdr ,
+as explained above.
+.LI
+If this function is a successful control transfer,
+it should return the label to which to transfer,
+and then
+.V= interpret-program
+calls itself recursively with the associated line.
+.LE
+.LI
+Write separate functions
+.VI interpret- statement
+for each one of the keyword in the language.
+.LI
+The function
+.V= evaluate-expression 
+is called by a statement interpreter.
+.ALX i ()
+.LI
+It looks up the function in the function table.
+.LI
+It uses
+.V= map 
+to call
+.V= evaluate-expression
+for each of the arguments to the function.
+.LI
+Then use
+.V= apply
+to apply the function to the list of results obtained.
+.LI
+Subscripting arrays will require a special case.
+.LE
+.LE
+.H 1 "Examples Directory"
+.VTCODE* 0 \*[CMPS-112-root]/Languages/scheme/Examples/
+.H 1 "Running \f[CB]mzscheme\fP Interactively"
+It will be very convenient for you to run
+.V= mzscheme 
+interactively for testing purposes simply by invoking it from
+the command line, as in\(::
+.TVCODE* 1 "-bash-1\[Do] " "mzscheme"
+.TVCODE* 1 "Welcome to Racket v6.1."
+.TVCODE* 1 "> " "(expt 2 128)
+.TVCODE* 1 "340282366920938463463374607431768211456"
+.TVCODE* 1 "> " "\[ha]D"
+To do this, be sure to put it in your 
+.V= \[Do]PATH .
+This can be done by putting the following lines in your
+.V= \&.bashrc
+or
+.V= \&.bash_profile\(::
+.br
+.ll +10
+.VTCODE* 1 "export PATH=\[Do]PATH:\*[CMPS-112-root]/usr/racket/bin
+.ll -10
+.br
+Of course, you may prefer to collapse these multiple shell
+commands into a single line.
+If you use a different shell,
+then setting your
+.V= \[Do]PATH
+will be done differently.
+.P
+To use the arrow keys on the keyboard to edit previous lines
+in interactive mode,
+put the following line in a file
+.V= \[Do]HOME/.racketrc \(::
+.VTCODE* 1 "(require readline)"
+Or, after starting
+.V= mzscheme ,
+enter this command before any other interaction.
+.H 1 "What to Submit"
+Submit two files\(::
+.V= README
+and
+.V= sbi.scm .
+It must be runnable by using it as the command word of any
+shell command, and hence the execute bit must be turned on
+.=V ( "chmod +x" ).
+It will be run as a shell script,
+and hence the first line must be the following hashbang\(::
+.VINDENT* "#!\*[Scheme-root]/bin/mzscheme -qr"
+.P
+Make sure that the Unix command
+.V= "which mzscheme"
+responds with the same executable.
+Important note\(::
+This must be the
+.E= first
+line in your script, and your id should be after it.
+Be sure there are no carriage return characters in the file.
+.P
+If you are doing pair programming, one partner should submit
+.V= sbi.scm ,
+but both should submit the
+.V= README
+and
+.V= PARTNER
+files, as specified in the pair programming guidelines.
+.P
+Be sure to use
+.V= checksource
+to verify basic formatting.
+If you do something silly like edit using a M*cr*\[Do]*ft editor,
+be sure to delete the carriage return characters before porting
+to Unix.
+This script, and other scripts,
+such as
+.V= cid
+and
+.V= elimcr ,
+are in the directory
+.VTCODE* 1 \*[CMPS-112-root]/bin
+which should also be put in your
+.V= \[Do]PATH
+environment variable.
+.P
+The
+.V= .score/
+subdirectory contains instructions to the graders.
+Be sure your program runs with the test script.
+If your program runs when typed in manually from the command line,
+but not using the script,
+you will receive no points for execution and testing.
+.FINISH
+@
+
+
+1.84
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.83 2019-01-17 16:47:33-08 - - $"
+d152 2
+a153 3
+the variable name and inserts it into the Symbol table,
+replacing any previous variable, array, or function already
+in the Symbol table.
+@
+
+
+1.83
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.82 2019-01-17 12:15:09-08 - - $"
+d583 1
+a583 1
+Alternately, after starting
+@
+
+
+1.82
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.81 2019-01-17 12:14:34-08 - - $"
+d583 3
+a585 4
+Alternately, start 
+.V= mzscheme 
+with the command\(::
+.VTCODE* 1 "rlwrap mzscheme"
+@
+
+
+1.81
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.80 2019-01-15 14:39:29-08 - - $"
+d428 1
+a428 1
+the section ``BUILTIN SYMBOLS''.
+@
+
+
+1.80
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.79 2019-01-10 16:38:44-08 - - $"
+a423 4
+including
+.V= pi
+and
+.V= e
+a424 3
+The variable
+.V= eof
+is initialized to 0.
+d427 2
+@
+
+
+1.79
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.78 2019-01-08 17:46:51-08 - - $"
+d582 10
+@
+
+
+1.78
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.77 2019-01-08 17:46:06-08 - - $"
+d327 1
+a327 1
+.V= eof " is " 0
+@
+
+
+1.77
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.76 2019-01-08 17:45:20-08 - - $"
+d329 1
+a329 1
+.V= pi " is " "(acos -1)"
+d331 1
+a331 1
+.V= e " is " "(exp 1)"
+@
+
+
+1.76
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.75 2019-01-08 17:41:25-08 - - $"
+d322 1
+a322 2
+The following variables
+are part of the initial variable table\(::
+d325 1
+a325 1
+.VR nan is "(/ 0.0 0.0)"
+d327 1
+a327 1
+.VR eof is 0
+d329 1
+a329 1
+.VR pi is "(acos -1)"
+d331 1
+a331 1
+.VR e is "(exp 1)"
+@
+
+
+1.75
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.74 2019-01-08 17:33:45-08 - - $"
+d302 1
+a302 1
+the following functions are supported\(::
+d319 15
+a333 12
+There is no facility for the user to add functions to the symbol table.
+The variables
+.V= nan
+.=V ( "(/ 0.0 0.0)" ),
+.V= eof
+.=V ( 0 ),
+.V= pi
+.=V ( "(acos -1)" ),
+and
+.V= e
+.=V ( "(exp 1)" )
+are also initially part of the variable table.
+@
+
+
+1.74
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.73 2019-01-08 17:30:59-08 - - $"
+d321 6
+a326 3
+.V= nan ,
+.V= eof ,
+.V= pi ,
+d329 1
+@
+
+
+1.73
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.72 2019-01-08 17:30:34-08 - - $"
+d319 1
+a319 3
+There is no facility for the user to add functions to the symbol
+table,
+although they can be replaced.
+d321 3
+a323 1
+.V= pi
+d326 1
+a326 2
+are also initially part of the symbol table,
+and they, too, can be replaced.
+@
+
+
+1.72
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.71 2019-01-08 17:28:44-08 - - $"
+d121 1
+a121 1
+and a stick indicates alternation.
+@
+
+
+1.71
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.70 2019-01-08 15:33:30-08 - - $"
+d17 1
+a17 1
+.      if '\\$1'}' .ds Prefix \f[R]
+d127 1
+a127 1
+.RULE Program @@ ( { @@ ( Linenr [ Label ] [ Statement ] @@ ) } @@ )
+d146 2
+a147 2
+.RULE Statement @@ ( @@ dim Array @@ )
+.RULE Array @@ ( @@ asub Variable Expression @@ )
+d165 1
+a165 1
+.RULE Memory Array | Variable
+d176 1
+a176 1
+.IR Array ,
+d205 1
+a205 1
+.RULE Statement @@ ( @@ print { Printable } @@ )
+d221 1
+a221 1
+.RULE Statement @@ ( @@ input Memory { Memory } @@ )
+d273 1
+a273 1
+.IR Array s,
+@
+
+
+1.70
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.69 2019-01-08 15:33:18-08 - - $"
+d227 1
+a227 1
+.IR Variable,
+@
+
+
+1.69
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.68 2019-01-08 15:32:38-08 - - $"
+d284 1
+a284 1
+is exponentiation (mathematically $ a sup b $)
+@
+
+
+1.68
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.67 2019-01-08 15:30:54-08 - - $"
+d281 1
+a281 1
+.V= "(- x (* (trunc (/ x y)) y))" .
+d284 1
+a284 1
+is exponentiation, mathematically $ a sup b $.
+@
+
+
+1.67
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.66 2019-01-08 15:30:12-08 - - $"
+d277 2
+a278 1
+.br
+d282 1
+a282 1
+.br
+d285 1
+@
+
+
+1.66
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.65 2019-01-08 15:28:37-08 - - $"
+d277 1
+a277 1
+The expression
+d281 1
+a281 2
+.P
+The expression
+@
+
+
+1.65
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.63 2019-01-08 15:14:02-08 - - $"
+a276 1
+.P
+@
+
+
+1.64
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.55 2019-01-04 16:58:08-08 - - $"
+d156 1
+d233 18
+a250 8
+The variable
+.V= inputcount
+is inserted into the symbol table at
+end of execution of this statement and initialized to the number
+of values successfully read in.
+A value of \-1 is used to indicate end of file.
+If anything other than a number occurs, that token is discarded,
+an error message is printed, and scanning continues.
+d257 2
+a258 1
+The value just propagates according to the rules of real arithmetic.
+d271 1
+a271 1
+Note that names of
+d381 1
+a381 1
+note that some computations, such as
+d424 5
+d588 2
+a589 1
+Also, make sure that the Unix command
+@
+
+
+1.63
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.62 2019-01-08 15:13:17-08 - - $"
+a155 1
+All values in the array are initialized to 0.
+d232 8
+a239 18
+If an invalid value (anything that is not a
+.V= number? )
+is read,
+the value returned is
+.V= nan .
+If end of file is encountered,
+the value returned is
+.V= nan
+and the variable
+.V= eof
+is entered into the symbol table with the value 1.
+The value of
+.V= nan
+can be computed using the expression
+.V= "(/ 0.0 0.0)" .
+The expression
+.V= "(= nan nan)"
+is false.
+d246 1
+a246 2
+The value just propagates according to the rules of real
+or complex arithmetic.
+d259 1
+a259 1
+Names of
+d369 1
+a369 1
+Some computations, such as
+a411 5
+The variable
+.V= eof
+is initialized to 0.
+Whenever a variable in the symbol table is not found,
+the value 0 is returned.
+d571 1
+a571 2
+.P
+Make sure that the Unix command
+@
+
+
+1.62
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.61 2019-01-08 14:59:29-08 - - $"
+d247 2
+a248 2
+.V= "(/ 0.0 0.0)" ,
+and, curiously,
+@
+
+
+1.61
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.60 2019-01-08 14:56:50-08 - - $"
+d246 5
+a250 2
+is
+.V= "(/ 0.0 0.0)" .
+d271 1
+a271 1
+Note that names of
+d381 1
+a381 1
+note that some computations, such as
+@
+
+
+1.60
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.59 2019-01-08 14:56:16-08 - - $"
+d156 1
+d421 5
+@
+
+
+1.59
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.58 2019-01-08 14:55:05-08 - - $"
+d253 2
+a254 1
+The value just propagates according to the rules of real arithmetic.
+@
+
+
+1.58
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.57 2019-01-08 14:54:40-08 - - $"
+d243 4
+@
+
+
+1.57
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.56 2019-01-04 17:00:46-08 - - $"
+d236 1
+a236 1
+V= nan .
+@
+
+
+1.56
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.55 2019-01-04 16:58:08-08 - - $"
+d232 11
+a242 8
+The variable
+.V= inputcount
+is inserted into the symbol table at
+end of execution of this statement and initialized to the number
+of values successfully read in.
+A value of \-1 is used to indicate end of file.
+If anything other than a number occurs, that token is discarded,
+an error message is printed, and scanning continues.
+@
+
+
+1.55
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.54 2019-01-04 16:56:07-08 - - $"
+d571 2
+a572 1
+Also, make sure that the Unix command
+@
+
+
+1.54
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.53 2019-01-04 16:55:03-08 - - $"
+d94 1
+a94 1
+strings and real numbers.
+d147 1
+a164 1
+.RULE Array @@ ( @@ asub Variable Expression @@ )
+@
+
+
+1.53
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.52 2019-01-04 16:54:47-08 - - $"
+d125 1
+a125 1
+.AL 1
+d144 1
+a144 1
+.AL 1
+d247 1
+a247 1
+.AL 1
+@
+
+
+1.52
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.51 2019-01-04 16:53:38-08 - - $"
+d586 1
+a586 1
+files, as specified in the pair programming guidlines.
+@
+
+
+1.51
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.50 2019-01-04 16:52:41-08 - - $"
+d474 1
+a474 1
+.ALX a ()
+d514 1
+a514 1
+.ALX a ()
+@
+
+
+1.50
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.49 2019-01-02 15:21:03-08 - - $"
+d435 96
+@
+
+
+1.49
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.48 2019-01-02 15:17:25-08 - - $"
+d435 1
+a435 1
+.H 1 "Examples directory"
+d437 1
+a437 1
+.H 1 "Running \f[CB]mzscheme\fP interactively"
+@
+
+
+1.48
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.47 2018-12-18 15:23:54-08 - - $"
+d146 1
+a146 1
+.RULE Statement @@ ( @@ dim Variable Expression @@ )
+d164 1
+a264 4
+In particular,
+the syntax of a function call and an array subscript is ambiguous.
+The code for both is just to send a message to the Symbol table
+and get back a result.
+@
+
+
+1.47
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.46 2018-12-18 15:22:56-08 - - $"
+d399 2
+a400 3
+.V= *identifier-table*
+is used to hold all of the functions, which include the operators
+as well.
+d407 3
+a409 1
+It also holds the value of all variables,
+d415 4
+@
+
+
+1.46
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.45 2018-12-18 15:21:39-08 - - $"
+d451 2
+a452 1
+.na
+d454 2
+a455 1
+.ad
+@
+
+
+1.45
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.44 2018-12-18 15:21:17-08 - - $"
+d451 1
+d453 1
+@
+
+
+1.44
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.43 2018-12-18 15:20:22-08 - - $"
+d494 2
+@
+
+
+1.43
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.42 2018-12-18 15:19:45-08 - - $"
+d492 4
+a495 1
+This, and other scripts, are in the directory
+@
+
+
+1.42
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.41 2018-12-18 15:15:39-08 - - $"
+a491 4
+This, and other scripts, are in the directory
+.VTCODE* 1 \*[CMPS-112-root]/bin
+which should also be put in your
+
+@
+
+
+1.41
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.40 2018-12-18 15:14:40-08 - - $"
+d492 9
+@
+
+
+1.40
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.39 2018-12-18 15:10:16-08 - - $"
+d451 1
+a451 3
+.VTCODE* 1 "export courses=/afs/cats.ucsc.edu/courses
+.VTCODE* 1 "export cmps112=\[Do]courses/cmps112-wm
+.VTCODE* 1 "export PATH=\[Do]PATH:\[Do]cmps112/usr/racket/bin
+@
+
+
+1.39
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.38 2018-10-12 14:17:13-07 - - $"
+d34 2
+d434 1
+a434 4
+.VTCODE* 0 \
+/afs/cats.ucsc.edu/courses/cmps112-wm/Languages/scheme/Examples/
+.VTCODE* 0 \
+http://www2.ucsc.edu/courses/cmps112-wm/:/Languages/scheme/Examples/
+d470 1
+a470 2
+.ds Schemeroot /afs/cats.ucsc.edu/courses/cmps112-wm/usr/racket
+.VINDENT* "#!\*[Schemeroot]/bin/mzscheme -qr"
+@
+
+
+1.38
+log
+@-
+@
+text
+@d5 1
+a5 1
+.TITLE CMPS-112 Fall\~2018 Program\~1 "Functionally Scheme"
+d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.37 2018-10-10 13:58:22-07 - - $"
+@
+
+
+1.37
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.36 2018-10-09 18:14:09-07 - - $"
+a374 3
+The directory
+.V= test-sbir
+contains sample test data.
+@
+
+
+1.36
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.34 2018-10-09 18:08:51-07 - - $"
+d234 1
+a234 1
+A value of \-1 is returned to indicate end of file.
+@
+
+
+1.35
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.32 2018-09-27 14:30:57-07 - - $"
+d144 1
+a144 2
+.RULE Statement @@ ( @@ dim Array @@ )
+.RULE Array @@ ( Variable Expression @@ )
+d344 1
+a344 1
+A second hash table is used whose keys are variable names
+d400 1
+a400 1
+.V= *function-table*
+d409 2
+a410 10
+.LI
+.V= *label-table*
+is used to hold addresses of each line, one level up from statements.
+This is initialized by scanning the list returned by
+.V= (read)
+when the program begins.
+.LI
+.V= *variable-table*
+which holds the value of all variables.
+This is initialized witgh
+d419 6
+@
+
+
+1.34
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.33 2018-10-08 13:49:52-07 - - $"
+d144 2
+a145 1
+.RULE Statement @@ ( @@ dim Variable Expression @@ )
+d345 1
+a345 1
+Another hash table is used whose keys are variable names
+d401 1
+a401 1
+.V= *identifier-table*
+d410 10
+a419 2
+It also holds the value of all variables,
+including
+a427 6
+.LI
+.V= *label-table*
+is used to hold addresses of each line, one level up from statements.
+This is initialized by scanning the list returned by
+.V= (read)
+when the program begins.
+@
+
+
+1.33
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.32 2018-09-27 14:30:57-07 - - $"
+d144 1
+a144 2
+.RULE Statement @@ ( @@ dim Array @@ )
+.RULE Array @@ ( Variable Expression @@ )
+@
+
+
+1.32
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.31 2018-08-22 16:08:44-07 - - $"
+d345 1
+a345 1
+A second hash table is used whose keys are variable names
+d401 1
+a401 1
+.V= *function-table*
+d410 2
+a411 10
+.LI
+.V= *label-table*
+is used to hold addresses of each line, one level up from statements.
+This is initialized by scanning the list returned by
+.V= (read)
+when the program begins.
+.LI
+.V= *variable-table*
+which holds the value of all variables.
+This is initialized witgh
+d420 6
+@
+
+
+1.31
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.30 2018-04-04 14:15:43-07 - - $"
+d486 1
+@
+
+
+1.30
+log
+@-
+@
+text
+@d5 1
+a5 1
+.TITLE CMPS-112 Spring\~2018 Program\~1 "Functionally Scheme"
+d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.29 2018-01-05 15:57:43-08 - - $"
+@
+
+
+1.29
+log
+@-
+@
+text
+@d5 1
+a5 1
+.TITLE CMPS-112 Winter\~2018 Program\~1 "Functionally Scheme"
+d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.28 2017-12-14 12:46:47-08 - - $"
+@
+
+
+1.28
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.27 2017-12-14 12:45:37-08 - - $"
+d501 8
+@
+
+
+1.27
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.26 2017-12-14 12:44:18-08 - - $"
+d498 3
+@
+
+
+1.26
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.25 2017-08-21 16:16:12-07 - - $"
+d449 2
+a450 2
+.TVCODE* 1 "> " "(expt 2 64)
+.TVCODE* 1 "18446744073709551616"
+@
+
+
+1.25
+log
+@-
+@
+text
+@d5 1
+a5 1
+.TITLE CMPS-112 Fall\~2017 Program\~1 "Functionally Scheme"
+d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.24 2017-03-29 16:21:41-07 - - $"
+@
+
+
+1.24
+log
+@-
+@
+text
+@d5 1
+a5 1
+.TITLE CMPS-112 Spring\~2017 Program\~1 "Functionally Scheme"
+d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.23 2016-09-30 13:23:18-07 - - $"
+@
+
+
+1.23
+log
+@-
+@
+text
+@d5 1
+a5 1
+.TITLE CMPS-112 Fall\~2016 Program\~1 "Functionally Scheme"
+d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.22 2016-09-30 13:22:00-07 - - $"
+@
+
+
+1.22
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.21 2016-09-30 13:21:25-07 - - $"
+d438 4
+a441 1
+.V= /afs/cats.ucsc.edu/courses/cmps112-wm/Languages/scheme/Examples/
+@
+
+
+1.21
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.20 2016-09-23 18:21:41-07 - - $"
+d437 2
+@
+
+
+1.20
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.19 2016-09-23 18:21:11-07 - - $"
+d408 2
+a409 1
+(See the examples.)
+@
+
+
+1.19
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.18 2016-09-23 18:20:28-07 - - $"
+d58 1
+@
+
+
+1.18
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.17 2016-09-21 18:36:46-07 - - $"
+d76 1
+a84 1
+And don't forget about what Dijkstra said about this language.
+d98 2
+@
+
+
+1.17
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.16 2016-09-21 18:35:34-07 - - $"
+d105 1
+d315 1
+@
+
+
+1.16
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.15 2016-09-21 18:20:45-07 - - $"
+d483 4
+@
+
+
+1.15
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.14 2016-09-21 14:56:03-07 - - $"
+d98 1
+a104 1
+Edsger W.\& Dijkstra.
+d150 1
+d225 1
+d263 1
+d268 1
+d358 4
+a361 1
+quantities.
+@
+
+
+1.14
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.13 2016-09-21 14:52:01-07 - - $"
+d109 1
+a109 1
+specified using a variation of Backus-Naur format,
+@
+
+
+1.13
+log
+@-
+@
+text
+@d6 2
+a7 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.12 2016-09-06 16:10:06-07 - - $"
+@
+
+
+1.12
+log
+@-
+@
+text
+@d3 1
+a4 1
+.INITR* \n[.F]
+d6 1
+a6 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.11 2016-09-06 16:08:34-07 - - $"
+@
+
+
+1.11
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.10 2016-09-06 16:08:08-07 - - $"
+d430 2
+a431 2
+.TVCODE* 1 "> " "(+ 2 2)"
+.TVCODE* 1 "4"
+@
+
+
+1.10
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.9 2016-09-06 16:05:55-07 - - $"
+d432 1
+a432 1
+.TVCOCE* 1 "> " "\[ha]D"
+@
+
+
+1.9
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.8 2016-09-06 15:54:05-07 - - $"
+d429 4
+@
+
+
+1.8
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.7 2016-09-06 15:53:37-07 - - $"
+d440 4
+@
+
+
+1.7
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.6 2016-09-06 15:48:22-07 - - $"
+d436 2
+a437 2
+.VTCODE* 1 "export cmps112=$courses/cmps112-wm
+.VTCODE* 1 "export PATH=$PATH:$cmps112/usr/racket/bin
+@
+
+
+1.6
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.5 2016-09-06 15:40:59-07 - - $"
+d423 17
+@
+
+
+1.5
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.4 2016-09-06 15:40:47-07 - - $"
+d433 1
+a433 1
+.ds Schemeroot /afs/cats.ucsc.edu/courses/cmps112-wm/usr/racket-5.1
+@
+
+
+1.4
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.3 2016-09-24 18:06:32-07 - - $"
+a35 1
+.P
+@
+
+
+1.3
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-112 Fall\~2015 Program\~1 "Functionally Scheme"
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.2 2015-09-23 16:09:29-07 - - $"
+@
+
+
+1.2
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-112 Fall\~2014 Program\~1 "Functionally Scheme"
+.RCS "$Id: asg1-scheme-sbi.mm,v 1.1 2015-09-23 16:08:30-07 - - $"
+@
+
+
+1.1
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: asg3-scheme-sbi.mm,v 1.17 2014-11-07 12:50:26-08 - - $"
+d34 3
+@

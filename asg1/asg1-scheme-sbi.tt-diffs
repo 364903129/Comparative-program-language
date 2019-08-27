@@ -1,0 +1,62 @@
+2c2
+< $Id: asg1-scheme-sbi.mm,v 1.70 2019-01-08 15:33:30-08 - - $
+---
+> $Id: asg1-scheme-sbi.mm,v 1.64 2019-01-08 15:27:17-08 - - $
+114c114
+<           expression.  All values in the array are initialized to 0.
+---
+>           expression.
+163,168c163,168
+<           If an invalid value (anything that is not a number?) is
+<           read, the value returned is nan.  If end of file is
+<           encountered, the value returned is nan and the variable eof
+<           is entered into the symbol table with the value 1.  The
+<           value of nan can be computed using the expression (/ 0.0
+<           0.0).  The expression (= nan nan) is false.
+---
+>           The variable inputcount is inserted into the symbol table at
+>           end of execution of this statement and initialized to the
+>           number of values successfully read in.  A value of -1 is
+>           used to indicate end of file.  If anything other than a
+>           number occurs, that token is discarded, an error message is
+>           printed, and scanning continues.
+175c175
+<      propagates according to the rules of real or complex arithmetic.
+---
+>      propagates according to the rules of real arithmetic.
+185,189c185,193
+<           Constants are numbers.  Names of Functions, Arrays, and
+<           Variables all look like identifiers and their meaning is
+<           given by context.
+<              · (% x y) is equivalent to (- x (* (trunc (/ x y)) y))
+<              · (^ a b) is exponentiation ($ a sup b $)
+---
+>           Constants are numbers.  Note that names of Functions,
+>           Arrays, and Variables all look like identifiers and their
+>           meaning is given by context.
+> 
+>           The expression (% x y) is equivalent to (- x (* (trunc (/ x
+>           y)) y)).
+> 
+>           The expression (^ a b) is exponentiation, mathematically $ a
+>           sup b $.
+243,244c247,249
+< number, Some computations, such as sqrt(-1), may produce them, and
+< thus will be written out in MzScheme's complex number notation.
+---
+> number, note that some computations, such as sqrt(-1), may produce
+> them, and thus will be written out in MzScheme's complex number
+> notation.
+267,269c272
+<      program.  The variable eof is initialized to 0.  Whenever a
+<      variable in the symbol table is not found, the value 0 is
+<      returned.
+---
+>      program.
+371,373c374,375
+< 
+< Make sure that the Unix command which mzscheme responds with the same
+< executable.  Important note:  This must be the first line in your
+---
+> Also, make sure that the Unix command which mzscheme responds with the
+> same executable.  Important note:  This must be the first line in your

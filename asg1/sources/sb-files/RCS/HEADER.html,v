@@ -1,0 +1,40 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2019.01.02.22.50.40;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@<HEAD>
+<TITLE>~cmps112-wm/Assignments/asg1-scheme-sbi/sources/sb-files</TITLE>
+<STYLE>
+body {
+   color: #2FFF2F !important;
+   background-color: #2F2F2F !important;
+}
+A:link {color: #00FFFF}
+A:visited {color: #FFFF00}
+A:hover {color: #FF0000}
+</STYLE>
+</HEAD>
+<BODY>
+<BIG><B><TT>
+<A HREF=http://www2.ucsc.edu/courses/cmps112-wm/:/Assignments/asg1-scheme-sbi/sources/sb-files/>http://www2.ucsc.edu/courses/cmps112-wm/:/Assignments/asg1-scheme-sbi/sources/sb-files/</A>
+<BR>/afs/cats.ucsc.edu/courses/cmps112-wm/Assignments/asg1-scheme-sbi/sources/sb-files
+</TT></B></BIG>
+@
